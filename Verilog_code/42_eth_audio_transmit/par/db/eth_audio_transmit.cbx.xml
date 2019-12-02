@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="eth_audio_transmit">
+		<CBX_INST_ENTRY INSTANCE_NAME="|eth_audio_transmit|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_mux:mux" CBX_FILE_NAME="mux_tsc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|eth_audio_transmit|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:\adv_point_3_and_more:advance_pointer_counter" CBX_FILE_NAME="cntr_mgi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|eth_audio_transmit|audio_cache_rx_ctrl:u_audio_cache_rx_ctrl|async_fifo_512x32b:u_async_fifo|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_i0l1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|eth_audio_transmit|audio_cache_tx_ctrl:u_audio_cache_tx_ctrl|async_fifo_512x32b:u_async_fifo|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_i0l1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|eth_audio_transmit|pll_clk:u_pll_clk|altpll:altpll_component" CBX_FILE_NAME="pll_clk_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|eth_audio_transmit|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder" CBX_FILE_NAME="decode_dvf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|eth_audio_transmit|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram" CBX_FILE_NAME="altsyncram_c124.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|eth_audio_transmit|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:status_advance_pointer_counter" CBX_FILE_NAME="cntr_hgi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|eth_audio_transmit|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:status_read_pointer_counter" CBX_FILE_NAME="cntr_23j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|eth_audio_transmit|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:read_pointer_counter" CBX_FILE_NAME="cntr_m9j.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

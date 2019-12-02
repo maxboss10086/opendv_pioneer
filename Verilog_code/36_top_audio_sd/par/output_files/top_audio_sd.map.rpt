@@ -1,0 +1,1459 @@
+Analysis & Synthesis report for top_audio_sd
+Thu Jan 17 18:20:11 2019
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. State Machine - |top_audio_sd|wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_dri:u_i2c_dri|cur_state
+ 11. State Machine - |top_audio_sd|sd_ctrl_top:u_sd_ctrl_top|sd_init:u_sd_init|cur_state
+ 12. Registers Removed During Synthesis
+ 13. Removed Registers Triggering Further Register Optimizations
+ 14. General Register Statistics
+ 15. Inverted Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for fifo:u_fifo|dcfifo:dcfifo_component
+ 18. Source assignments for fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated
+ 19. Source assignments for fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|a_graycounter_4p6:rdptr_g1p
+ 20. Source assignments for fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|a_graycounter_07c:wrptr_g1p
+ 21. Source assignments for fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|altsyncram_q211:fifo_ram
+ 22. Source assignments for fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|alt_synch_pipe_c7d:rs_dgwp
+ 23. Source assignments for fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|alt_synch_pipe_c7d:rs_dgwp|dffpipe_b09:dffpipe12
+ 24. Source assignments for fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|dffpipe_a09:ws_brp
+ 25. Source assignments for fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|dffpipe_a09:ws_bwp
+ 26. Source assignments for fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|alt_synch_pipe_d7d:ws_dgrp
+ 27. Source assignments for fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|alt_synch_pipe_d7d:ws_dgrp|dffpipe_c09:dffpipe16
+ 28. Parameter Settings for User Entity Instance: Top-level Entity: |top_audio_sd
+ 29. Parameter Settings for User Entity Instance: pll_clk:u_pll_clk|altpll:altpll_component
+ 30. Parameter Settings for User Entity Instance: sd_ctrl_top:u_sd_ctrl_top|sd_init:u_sd_init
+ 31. Parameter Settings for User Entity Instance: sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write
+ 32. Parameter Settings for User Entity Instance: fifo:u_fifo|dcfifo:dcfifo_component
+ 33. Parameter Settings for User Entity Instance: wm8978_ctrl:u_wm8978
+ 34. Parameter Settings for User Entity Instance: wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config
+ 35. Parameter Settings for User Entity Instance: wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_dri:u_i2c_dri
+ 36. Parameter Settings for User Entity Instance: wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_reg_cfg:u_i2c_reg_cfg
+ 37. Parameter Settings for User Entity Instance: wm8978_ctrl:u_wm8978|audio_receive:u_audio_receive
+ 38. Parameter Settings for User Entity Instance: wm8978_ctrl:u_wm8978|audio_send:u_audio_send
+ 39. Parameter Settings for User Entity Instance: audio_sd_ctrl:u_audio_sd_ctrl
+ 40. altpll Parameter Settings by Entity Instance
+ 41. dcfifo Parameter Settings by Entity Instance
+ 42. Port Connectivity Checks: "wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_reg_cfg:u_i2c_reg_cfg"
+ 43. Port Connectivity Checks: "wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_dri:u_i2c_dri"
+ 44. Port Connectivity Checks: "wm8978_ctrl:u_wm8978"
+ 45. Port Connectivity Checks: "sd_ctrl_top:u_sd_ctrl_top"
+ 46. Elapsed Time Per Partition
+ 47. Analysis & Synthesis Messages
+ 48. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Jan 17 18:20:11 2019       ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
+; Revision Name                      ; top_audio_sd                                ;
+; Top-level Entity Name              ; top_audio_sd                                ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 752                                         ;
+;     Total combinational functions  ; 531                                         ;
+;     Dedicated logic registers      ; 480                                         ;
+; Total registers                    ; 480                                         ;
+; Total pins                         ; 13                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 16,384                                      ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 1                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE10F17C8       ;                    ;
+; Top-level entity name                                                      ; top_audio_sd       ; top_audio_sd       ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                           ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                       ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------+---------+
+; ../rtl/wm8978/wm8978_ctrl.v      ; yes             ; User Verilog HDL File        ; E:/Verilog/top_audio_sd/rtl/wm8978/wm8978_ctrl.v                   ;         ;
+; ../rtl/wm8978/wm8978_config.v    ; yes             ; User Verilog HDL File        ; E:/Verilog/top_audio_sd/rtl/wm8978/wm8978_config.v                 ;         ;
+; ../rtl/wm8978/i2c_reg_cfg.v      ; yes             ; User Verilog HDL File        ; E:/Verilog/top_audio_sd/rtl/wm8978/i2c_reg_cfg.v                   ;         ;
+; ../rtl/wm8978/i2c_dri.v          ; yes             ; User Verilog HDL File        ; E:/Verilog/top_audio_sd/rtl/wm8978/i2c_dri.v                       ;         ;
+; ../rtl/wm8978/audio_send.v       ; yes             ; User Verilog HDL File        ; E:/Verilog/top_audio_sd/rtl/wm8978/audio_send.v                    ;         ;
+; ../rtl/wm8978/audio_receive.v    ; yes             ; User Verilog HDL File        ; E:/Verilog/top_audio_sd/rtl/wm8978/audio_receive.v                 ;         ;
+; ../rtl/top_audio_sd.v            ; yes             ; User Verilog HDL File        ; E:/Verilog/top_audio_sd/rtl/top_audio_sd.v                         ;         ;
+; ../rtl/sd/sd_write.v             ; yes             ; User Verilog HDL File        ; E:/Verilog/top_audio_sd/rtl/sd/sd_write.v                          ;         ;
+; ../rtl/sd/sd_read.v              ; yes             ; User Verilog HDL File        ; E:/Verilog/top_audio_sd/rtl/sd/sd_read.v                           ;         ;
+; ../rtl/sd/sd_init.v              ; yes             ; User Verilog HDL File        ; E:/Verilog/top_audio_sd/rtl/sd/sd_init.v                           ;         ;
+; ../rtl/sd/sd_ctrl_top.v          ; yes             ; User Verilog HDL File        ; E:/Verilog/top_audio_sd/rtl/sd/sd_ctrl_top.v                       ;         ;
+; ../rtl/audio_sd_ctrl.v           ; yes             ; User Verilog HDL File        ; E:/Verilog/top_audio_sd/rtl/audio_sd_ctrl.v                        ;         ;
+; ipcore/pll_clk.v                 ; yes             ; User Wizard-Generated File   ; E:/Verilog/top_audio_sd/par/ipcore/pll_clk.v                       ;         ;
+; ipcore/fifo.v                    ; yes             ; User Wizard-Generated File   ; E:/Verilog/top_audio_sd/par/ipcore/fifo.v                          ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/altpll.tdf          ;         ;
+; aglobal131.inc                   ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc      ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/stratix_pll.inc     ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/stratixii_pll.inc   ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/cycloneii_pll.inc   ;         ;
+; db/pll_clk_altpll.v              ; yes             ; Auto-Generated Megafunction  ; E:/Verilog/top_audio_sd/par/db/pll_clk_altpll.v                    ;         ;
+; dcfifo.tdf                       ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/dcfifo.tdf          ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/lpm_counter.inc     ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/lpm_add_sub.inc     ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/altdpram.inc        ;         ;
+; a_graycounter.inc                ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/a_graycounter.inc   ;         ;
+; a_fefifo.inc                     ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/a_fefifo.inc        ;         ;
+; a_gray2bin.inc                   ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/a_gray2bin.inc      ;         ;
+; dffpipe.inc                      ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/dffpipe.inc         ;         ;
+; alt_sync_fifo.inc                ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/alt_sync_fifo.inc   ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/lpm_compare.inc     ;         ;
+; altsyncram_fifo.inc              ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/altsyncram_fifo.inc ;         ;
+; db/dcfifo_s3f1.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/Verilog/top_audio_sd/par/db/dcfifo_s3f1.tdf                     ;         ;
+; db/a_gray2bin_7ib.tdf            ; yes             ; Auto-Generated Megafunction  ; E:/Verilog/top_audio_sd/par/db/a_gray2bin_7ib.tdf                  ;         ;
+; db/a_graycounter_4p6.tdf         ; yes             ; Auto-Generated Megafunction  ; E:/Verilog/top_audio_sd/par/db/a_graycounter_4p6.tdf               ;         ;
+; db/a_graycounter_07c.tdf         ; yes             ; Auto-Generated Megafunction  ; E:/Verilog/top_audio_sd/par/db/a_graycounter_07c.tdf               ;         ;
+; db/altsyncram_q211.tdf           ; yes             ; Auto-Generated Megafunction  ; E:/Verilog/top_audio_sd/par/db/altsyncram_q211.tdf                 ;         ;
+; db/alt_synch_pipe_c7d.tdf        ; yes             ; Auto-Generated Megafunction  ; E:/Verilog/top_audio_sd/par/db/alt_synch_pipe_c7d.tdf              ;         ;
+; db/dffpipe_b09.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/Verilog/top_audio_sd/par/db/dffpipe_b09.tdf                     ;         ;
+; db/dffpipe_a09.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/Verilog/top_audio_sd/par/db/dffpipe_a09.tdf                     ;         ;
+; db/alt_synch_pipe_d7d.tdf        ; yes             ; Auto-Generated Megafunction  ; E:/Verilog/top_audio_sd/par/db/alt_synch_pipe_d7d.tdf              ;         ;
+; db/dffpipe_c09.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/Verilog/top_audio_sd/par/db/dffpipe_c09.tdf                     ;         ;
+; db/cmpr_o76.tdf                  ; yes             ; Auto-Generated Megafunction  ; E:/Verilog/top_audio_sd/par/db/cmpr_o76.tdf                        ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+; Estimated Total logic elements              ; 752     ;
+;                                             ;         ;
+; Total combinational functions               ; 531     ;
+; Logic element usage by number of LUT inputs ;         ;
+;     -- 4 input functions                    ; 240     ;
+;     -- 3 input functions                    ; 89      ;
+;     -- <=2 input functions                  ; 202     ;
+;                                             ;         ;
+; Logic elements by mode                      ;         ;
+;     -- normal mode                          ; 411     ;
+;     -- arithmetic mode                      ; 120     ;
+;                                             ;         ;
+; Total registers                             ; 480     ;
+;     -- Dedicated logic registers            ; 480     ;
+;     -- I/O registers                        ; 0       ;
+;                                             ;         ;
+; I/O pins                                    ; 13      ;
+; Total memory bits                           ; 16384   ;
+; Embedded Multiplier 9-bit elements          ; 0       ;
+; Total PLLs                                  ; 1       ;
+;     -- PLLs                                 ; 1       ;
+;                                             ;         ;
+; Maximum fan-out node                        ; rst_n~0 ;
+; Maximum fan-out                             ; 352     ;
+; Total fan-out                               ; 3712    ;
+; Average fan-out                             ; 3.52    ;
++---------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                      ;
++-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                    ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                           ; Library Name ;
++-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |top_audio_sd                                 ; 531 (2)           ; 480 (0)      ; 16384       ; 0            ; 0       ; 0         ; 13   ; 0            ; |top_audio_sd                                                                                                                 ; work         ;
+;    |audio_sd_ctrl:u_audio_sd_ctrl|            ; 65 (65)           ; 56 (56)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_audio_sd|audio_sd_ctrl:u_audio_sd_ctrl                                                                                   ; work         ;
+;    |fifo:u_fifo|                              ; 96 (0)            ; 127 (0)      ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_audio_sd|fifo:u_fifo                                                                                                     ; work         ;
+;       |dcfifo:dcfifo_component|               ; 96 (0)            ; 127 (0)      ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_audio_sd|fifo:u_fifo|dcfifo:dcfifo_component                                                                             ; work         ;
+;          |dcfifo_s3f1:auto_generated|         ; 96 (15)           ; 127 (33)     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_audio_sd|fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated                                                  ; work         ;
+;             |a_gray2bin_7ib:wrptr_g_gray2bin| ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_audio_sd|fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|a_gray2bin_7ib:wrptr_g_gray2bin                  ; work         ;
+;             |a_gray2bin_7ib:ws_dgrp_gray2bin| ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_audio_sd|fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|a_gray2bin_7ib:ws_dgrp_gray2bin                  ; work         ;
+;             |a_graycounter_07c:wrptr_g1p|     ; 25 (25)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_audio_sd|fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|a_graycounter_07c:wrptr_g1p                      ; work         ;
+;             |a_graycounter_4p6:rdptr_g1p|     ; 23 (23)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_audio_sd|fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|a_graycounter_4p6:rdptr_g1p                      ; work         ;
+;             |alt_synch_pipe_c7d:rs_dgwp|      ; 0 (0)             ; 22 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_audio_sd|fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|alt_synch_pipe_c7d:rs_dgwp                       ; work         ;
+;                |dffpipe_b09:dffpipe12|        ; 0 (0)             ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_audio_sd|fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|alt_synch_pipe_c7d:rs_dgwp|dffpipe_b09:dffpipe12 ; work         ;
+;             |alt_synch_pipe_d7d:ws_dgrp|      ; 0 (0)             ; 22 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_audio_sd|fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|alt_synch_pipe_d7d:ws_dgrp                       ; work         ;
+;                |dffpipe_c09:dffpipe16|        ; 0 (0)             ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_audio_sd|fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|alt_synch_pipe_d7d:ws_dgrp|dffpipe_c09:dffpipe16 ; work         ;
+;             |altsyncram_q211:fifo_ram|        ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_audio_sd|fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|altsyncram_q211:fifo_ram                         ; work         ;
+;             |cmpr_o76:rdempty_eq_comp|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_audio_sd|fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|cmpr_o76:rdempty_eq_comp                         ; work         ;
+;             |cmpr_o76:wrfull_eq_comp|         ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_audio_sd|fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|cmpr_o76:wrfull_eq_comp                          ; work         ;
+;             |dffpipe_a09:ws_brp|              ; 0 (0)             ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_audio_sd|fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|dffpipe_a09:ws_brp                               ; work         ;
+;             |dffpipe_a09:ws_bwp|              ; 0 (0)             ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_audio_sd|fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|dffpipe_a09:ws_bwp                               ; work         ;
+;    |pll_clk:u_pll_clk|                        ; 0 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_audio_sd|pll_clk:u_pll_clk                                                                                               ; work         ;
+;       |altpll:altpll_component|               ; 0 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_audio_sd|pll_clk:u_pll_clk|altpll:altpll_component                                                                       ; work         ;
+;          |pll_clk_altpll:auto_generated|      ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_audio_sd|pll_clk:u_pll_clk|altpll:altpll_component|pll_clk_altpll:auto_generated                                         ; work         ;
+;    |sd_ctrl_top:u_sd_ctrl_top|                ; 216 (3)           ; 198 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_audio_sd|sd_ctrl_top:u_sd_ctrl_top                                                                                       ; work         ;
+;       |sd_init:u_sd_init|                     ; 111 (111)         ; 106 (106)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_audio_sd|sd_ctrl_top:u_sd_ctrl_top|sd_init:u_sd_init                                                                     ; work         ;
+;       |sd_read:u_sd_read|                     ; 102 (102)         ; 92 (92)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_audio_sd|sd_ctrl_top:u_sd_ctrl_top|sd_read:u_sd_read                                                                     ; work         ;
+;    |wm8978_ctrl:u_wm8978|                     ; 152 (0)           ; 98 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_audio_sd|wm8978_ctrl:u_wm8978                                                                                            ; work         ;
+;       |audio_send:u_audio_send|               ; 22 (22)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_audio_sd|wm8978_ctrl:u_wm8978|audio_send:u_audio_send                                                                    ; work         ;
+;       |wm8978_config:u_wm8978_config|         ; 130 (0)           ; 73 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_audio_sd|wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config                                                              ; work         ;
+;          |i2c_dri:u_i2c_dri|                  ; 86 (86)           ; 43 (43)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_audio_sd|wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_dri:u_i2c_dri                                            ; work         ;
+;          |i2c_reg_cfg:u_i2c_reg_cfg|          ; 44 (44)           ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_audio_sd|wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_reg_cfg:u_i2c_reg_cfg                                    ; work         ;
++-----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                        ;
++----------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+; Name                                                                                               ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF  ;
++----------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+; fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|altsyncram_q211:fifo_ram|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 1024         ; 16           ; 1024         ; 16           ; 16384 ; None ;
++----------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                          ;
++--------+--------------+---------+--------------+--------------+---------------------------------+----------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                 ; IP Include File                              ;
++--------+--------------+---------+--------------+--------------+---------------------------------+----------------------------------------------+
+; Altera ; FIFO         ; 13.1    ; N/A          ; N/A          ; |top_audio_sd|fifo:u_fifo       ; E:/Verilog/top_audio_sd/par/ipcore/fifo.v    ;
+; Altera ; ALTPLL       ; 13.1    ; N/A          ; N/A          ; |top_audio_sd|pll_clk:u_pll_clk ; E:/Verilog/top_audio_sd/par/ipcore/pll_clk.v ;
++--------+--------------+---------+--------------+--------------+---------------------------------+----------------------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_audio_sd|wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_dri:u_i2c_dri|cur_state                                                                                       ;
++----------------------+-------------------+----------------------+----------------------+----------------------+--------------------+---------------------+---------------------+-------------------+
+; Name                 ; cur_state.st_stop ; cur_state.st_data_rd ; cur_state.st_addr_rd ; cur_state.st_data_wr ; cur_state.st_addr8 ; cur_state.st_addr16 ; cur_state.st_sladdr ; cur_state.st_idle ;
++----------------------+-------------------+----------------------+----------------------+----------------------+--------------------+---------------------+---------------------+-------------------+
+; cur_state.st_idle    ; 0                 ; 0                    ; 0                    ; 0                    ; 0                  ; 0                   ; 0                   ; 0                 ;
+; cur_state.st_sladdr  ; 0                 ; 0                    ; 0                    ; 0                    ; 0                  ; 0                   ; 1                   ; 1                 ;
+; cur_state.st_addr16  ; 0                 ; 0                    ; 0                    ; 0                    ; 0                  ; 1                   ; 0                   ; 1                 ;
+; cur_state.st_addr8   ; 0                 ; 0                    ; 0                    ; 0                    ; 1                  ; 0                   ; 0                   ; 1                 ;
+; cur_state.st_data_wr ; 0                 ; 0                    ; 0                    ; 1                    ; 0                  ; 0                   ; 0                   ; 1                 ;
+; cur_state.st_addr_rd ; 0                 ; 0                    ; 1                    ; 0                    ; 0                  ; 0                   ; 0                   ; 1                 ;
+; cur_state.st_data_rd ; 0                 ; 1                    ; 0                    ; 0                    ; 0                  ; 0                   ; 0                   ; 1                 ;
+; cur_state.st_stop    ; 1                 ; 0                    ; 0                    ; 0                    ; 0                  ; 0                   ; 0                   ; 1                 ;
++----------------------+-------------------+----------------------+----------------------+----------------------+--------------------+---------------------+---------------------+-------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_audio_sd|sd_ctrl_top:u_sd_ctrl_top|sd_init:u_sd_init|cur_state                                                                                                                   ;
++--------------------------+------------------------+--------------------------+-------------------------+------------------------+------------------------+------------------------+-------------------+
+; Name                     ; cur_state.st_init_done ; cur_state.st_send_acmd41 ; cur_state.st_send_cmd55 ; cur_state.st_send_cmd8 ; cur_state.st_wait_cmd0 ; cur_state.st_send_cmd0 ; cur_state.st_idle ;
++--------------------------+------------------------+--------------------------+-------------------------+------------------------+------------------------+------------------------+-------------------+
+; cur_state.st_idle        ; 0                      ; 0                        ; 0                       ; 0                      ; 0                      ; 0                      ; 0                 ;
+; cur_state.st_send_cmd0   ; 0                      ; 0                        ; 0                       ; 0                      ; 0                      ; 1                      ; 1                 ;
+; cur_state.st_wait_cmd0   ; 0                      ; 0                        ; 0                       ; 0                      ; 1                      ; 0                      ; 1                 ;
+; cur_state.st_send_cmd8   ; 0                      ; 0                        ; 0                       ; 1                      ; 0                      ; 0                      ; 1                 ;
+; cur_state.st_send_cmd55  ; 0                      ; 0                        ; 1                       ; 0                      ; 0                      ; 0                      ; 1                 ;
+; cur_state.st_send_acmd41 ; 0                      ; 1                        ; 0                       ; 0                      ; 0                      ; 0                      ; 1                 ;
+; cur_state.st_init_done   ; 1                      ; 0                        ; 0                       ; 0                      ; 0                      ; 0                      ; 1                 ;
++--------------------------+------------------------+--------------------------+-------------------------+------------------------+------------------------+------------------------+-------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                   ;
++-----------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+; Register name                                                                                 ; Reason for Removal                                                                                   ;
++-----------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+; audio_sd_ctrl:u_audio_sd_ctrl|rd_sec_addr[18..31]                                             ; Stuck at GND due to stuck port data_in                                                               ;
+; wm8978_ctrl:u_wm8978|audio_send:u_audio_send|dac_data_t[16..31]                               ; Stuck at GND due to stuck port data_in                                                               ;
+; wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_reg_cfg:u_i2c_reg_cfg|i2c_data[15]     ; Stuck at GND due to stuck port data_in                                                               ;
+; sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write|wr_en_d0                                        ; Stuck at GND due to stuck port data_in                                                               ;
+; sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write|wr_en_d1                                        ; Stuck at GND due to stuck port data_in                                                               ;
+; sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write|wr_busy                                         ; Stuck at GND due to stuck port data_in                                                               ;
+; sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write|res_en                                          ; Lost fanout                                                                                          ;
+; sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write|res_flag                                        ; Lost fanout                                                                                          ;
+; sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write|res_bit_cnt[0..5]                               ; Lost fanout                                                                                          ;
+; sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write|detect_data[1..7]                               ; Lost fanout                                                                                          ;
+; sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write|detect_done_flag                                ; Lost fanout                                                                                          ;
+; sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write|detect_data[0]                                  ; Lost fanout                                                                                          ;
+; sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write|sd_cs                                           ; Lost fanout                                                                                          ;
+; sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write|sd_mosi                                         ; Lost fanout                                                                                          ;
+; sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write|wr_ctrl_cnt[0..3]                               ; Lost fanout                                                                                          ;
+; sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write|cmd_wr[0..47]                                   ; Lost fanout                                                                                          ;
+; sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write|cmd_bit_cnt[0..5]                               ; Lost fanout                                                                                          ;
+; sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write|bit_cnt[0..3]                                   ; Lost fanout                                                                                          ;
+; sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write|wr_data_t[0..15]                                ; Lost fanout                                                                                          ;
+; sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write|data_cnt[0..8]                                  ; Lost fanout                                                                                          ;
+; wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_dri:u_i2c_dri|wr_flag                  ; Stuck at GND due to stuck port data_in                                                               ;
+; wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_dri:u_i2c_dri|addr_t[7..15]            ; Stuck at GND due to stuck port data_in                                                               ;
+; sd_ctrl_top:u_sd_ctrl_top|sd_read:u_sd_read|cmd_rd[26..39,41..43,45,47]                       ; Stuck at GND due to stuck port data_in                                                               ;
+; fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|dffpipe_a09:ws_bwp|dffe15a[10] ; Lost fanout                                                                                          ;
+; fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|dffpipe_a09:ws_brp|dffe15a[10] ; Lost fanout                                                                                          ;
+; wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_reg_cfg:u_i2c_reg_cfg|wl[0]            ; Merged with wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_reg_cfg:u_i2c_reg_cfg|wl[1]       ;
+; sd_ctrl_top:u_sd_ctrl_top|sd_read:u_sd_read|cmd_rd[1..7,40,44,46]                             ; Merged with sd_ctrl_top:u_sd_ctrl_top|sd_read:u_sd_read|cmd_rd[0]                                    ;
+; sd_ctrl_top:u_sd_ctrl_top|sd_init:u_sd_init|cur_state~11                                      ; Lost fanout                                                                                          ;
+; wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_dri:u_i2c_dri|cur_state.st_addr_rd     ; Merged with wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_dri:u_i2c_dri|cur_state.st_addr16 ;
+; wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_dri:u_i2c_dri|cur_state.st_addr16      ; Stuck at GND due to stuck port data_in                                                               ;
+; wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_dri:u_i2c_dri|cur_state.st_data_rd     ; Stuck at GND due to stuck port data_in                                                               ;
+; Total Number of Removed Registers = 186                                                       ;                                                                                                      ;
++-----------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                                            ;
++-------------------------------------------------------------------------------------------+---------------------------+--------------------------------------------------------------------------------+
+; Register name                                                                             ; Reason for Removal        ; Registers Removed due to This Register                                         ;
++-------------------------------------------------------------------------------------------+---------------------------+--------------------------------------------------------------------------------+
+; sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write|wr_en_d0                                    ; Stuck at GND              ; sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write|wr_busy,                         ;
+;                                                                                           ; due to stuck port data_in ; sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write|res_en,                          ;
+;                                                                                           ;                           ; sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write|sd_cs,                           ;
+;                                                                                           ;                           ; sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write|sd_mosi,                         ;
+;                                                                                           ;                           ; sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write|wr_ctrl_cnt[3],                  ;
+;                                                                                           ;                           ; sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write|wr_ctrl_cnt[2],                  ;
+;                                                                                           ;                           ; sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write|wr_ctrl_cnt[1],                  ;
+;                                                                                           ;                           ; sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write|wr_ctrl_cnt[0]                   ;
+; audio_sd_ctrl:u_audio_sd_ctrl|rd_sec_addr[31]                                             ; Stuck at GND              ; sd_ctrl_top:u_sd_ctrl_top|sd_read:u_sd_read|cmd_rd[39]                         ;
+;                                                                                           ; due to stuck port data_in ;                                                                                ;
+; audio_sd_ctrl:u_audio_sd_ctrl|rd_sec_addr[30]                                             ; Stuck at GND              ; sd_ctrl_top:u_sd_ctrl_top|sd_read:u_sd_read|cmd_rd[38]                         ;
+;                                                                                           ; due to stuck port data_in ;                                                                                ;
+; audio_sd_ctrl:u_audio_sd_ctrl|rd_sec_addr[29]                                             ; Stuck at GND              ; sd_ctrl_top:u_sd_ctrl_top|sd_read:u_sd_read|cmd_rd[37]                         ;
+;                                                                                           ; due to stuck port data_in ;                                                                                ;
+; audio_sd_ctrl:u_audio_sd_ctrl|rd_sec_addr[28]                                             ; Stuck at GND              ; sd_ctrl_top:u_sd_ctrl_top|sd_read:u_sd_read|cmd_rd[36]                         ;
+;                                                                                           ; due to stuck port data_in ;                                                                                ;
+; audio_sd_ctrl:u_audio_sd_ctrl|rd_sec_addr[27]                                             ; Stuck at GND              ; sd_ctrl_top:u_sd_ctrl_top|sd_read:u_sd_read|cmd_rd[35]                         ;
+;                                                                                           ; due to stuck port data_in ;                                                                                ;
+; audio_sd_ctrl:u_audio_sd_ctrl|rd_sec_addr[26]                                             ; Stuck at GND              ; sd_ctrl_top:u_sd_ctrl_top|sd_read:u_sd_read|cmd_rd[34]                         ;
+;                                                                                           ; due to stuck port data_in ;                                                                                ;
+; audio_sd_ctrl:u_audio_sd_ctrl|rd_sec_addr[25]                                             ; Stuck at GND              ; sd_ctrl_top:u_sd_ctrl_top|sd_read:u_sd_read|cmd_rd[33]                         ;
+;                                                                                           ; due to stuck port data_in ;                                                                                ;
+; audio_sd_ctrl:u_audio_sd_ctrl|rd_sec_addr[24]                                             ; Stuck at GND              ; sd_ctrl_top:u_sd_ctrl_top|sd_read:u_sd_read|cmd_rd[32]                         ;
+;                                                                                           ; due to stuck port data_in ;                                                                                ;
+; audio_sd_ctrl:u_audio_sd_ctrl|rd_sec_addr[23]                                             ; Stuck at GND              ; sd_ctrl_top:u_sd_ctrl_top|sd_read:u_sd_read|cmd_rd[31]                         ;
+;                                                                                           ; due to stuck port data_in ;                                                                                ;
+; audio_sd_ctrl:u_audio_sd_ctrl|rd_sec_addr[22]                                             ; Stuck at GND              ; sd_ctrl_top:u_sd_ctrl_top|sd_read:u_sd_read|cmd_rd[30]                         ;
+;                                                                                           ; due to stuck port data_in ;                                                                                ;
+; audio_sd_ctrl:u_audio_sd_ctrl|rd_sec_addr[21]                                             ; Stuck at GND              ; sd_ctrl_top:u_sd_ctrl_top|sd_read:u_sd_read|cmd_rd[29]                         ;
+;                                                                                           ; due to stuck port data_in ;                                                                                ;
+; audio_sd_ctrl:u_audio_sd_ctrl|rd_sec_addr[20]                                             ; Stuck at GND              ; sd_ctrl_top:u_sd_ctrl_top|sd_read:u_sd_read|cmd_rd[28]                         ;
+;                                                                                           ; due to stuck port data_in ;                                                                                ;
+; audio_sd_ctrl:u_audio_sd_ctrl|rd_sec_addr[19]                                             ; Stuck at GND              ; sd_ctrl_top:u_sd_ctrl_top|sd_read:u_sd_read|cmd_rd[27]                         ;
+;                                                                                           ; due to stuck port data_in ;                                                                                ;
+; audio_sd_ctrl:u_audio_sd_ctrl|rd_sec_addr[18]                                             ; Stuck at GND              ; sd_ctrl_top:u_sd_ctrl_top|sd_read:u_sd_read|cmd_rd[26]                         ;
+;                                                                                           ; due to stuck port data_in ;                                                                                ;
+; wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_reg_cfg:u_i2c_reg_cfg|i2c_data[15] ; Stuck at GND              ; wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_dri:u_i2c_dri|addr_t[7] ;
+;                                                                                           ; due to stuck port data_in ;                                                                                ;
++-------------------------------------------------------------------------------------------+---------------------------+--------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 480   ;
+; Number of registers using Synchronous Clear  ; 53    ;
+; Number of registers using Synchronous Load   ; 9     ;
+; Number of registers using Asynchronous Clear ; 352   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 303   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                                    ;
++-------------------------------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                                     ; Fan out ;
++-------------------------------------------------------------------------------------------------------+---------+
+; wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_dri:u_i2c_dri|scl                              ; 4       ;
+; sd_ctrl_top:u_sd_ctrl_top|sd_init:u_sd_init|sd_mosi                                                   ; 1       ;
+; sd_ctrl_top:u_sd_ctrl_top|sd_read:u_sd_read|sd_mosi                                                   ; 2       ;
+; sd_ctrl_top:u_sd_ctrl_top|sd_init:u_sd_init|sd_cs                                                     ; 2       ;
+; sd_ctrl_top:u_sd_ctrl_top|sd_read:u_sd_read|sd_cs                                                     ; 2       ;
+; wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_dri:u_i2c_dri|dri_clk                          ; 63      ;
+; wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_dri:u_i2c_dri|sda_out                          ; 8       ;
+; wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_dri:u_i2c_dri|sda_dir                          ; 2       ;
+; fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|a_graycounter_4p6:rdptr_g1p|counter5a0 ; 7       ;
+; fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|a_graycounter_07c:wrptr_g1p|counter8a0 ; 7       ;
+; fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|a_graycounter_4p6:rdptr_g1p|parity6    ; 4       ;
+; fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|a_graycounter_07c:wrptr_g1p|parity9    ; 5       ;
+; Total number of inverted registers = 12                                                               ;         ;
++-------------------------------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_audio_sd|sd_ctrl_top:u_sd_ctrl_top|sd_read:u_sd_read|cmd_bit_cnt[1]                                     ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |top_audio_sd|sd_ctrl_top:u_sd_ctrl_top|sd_read:u_sd_read|rx_data_cnt[4]                                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |top_audio_sd|wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_reg_cfg:u_i2c_reg_cfg|start_init_cnt[7] ;
+; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |top_audio_sd|audio_sd_ctrl:u_audio_sd_ctrl|rd_sec_cnt[11]                                                   ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_audio_sd|wm8978_ctrl:u_wm8978|audio_send:u_audio_send|tx_cnt[5]                                         ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_audio_sd|sd_ctrl_top:u_sd_ctrl_top|sd_init:u_sd_init|res_flag                                           ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_audio_sd|sd_ctrl_top:u_sd_ctrl_top|sd_init:u_sd_init|res_bit_cnt[5]                                     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_audio_sd|sd_ctrl_top:u_sd_ctrl_top|sd_read:u_sd_read|rx_bit_cnt[3]                                      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_audio_sd|sd_ctrl_top:u_sd_ctrl_top|sd_read:u_sd_read|res_en                                             ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_audio_sd|sd_ctrl_top:u_sd_ctrl_top|sd_read:u_sd_read|res_bit_cnt[5]                                     ;
+; 32:1               ; 13 bits   ; 273 LEs       ; 143 LEs              ; 130 LEs                ; Yes        ; |top_audio_sd|wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_reg_cfg:u_i2c_reg_cfg|i2c_data[3]       ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |top_audio_sd|audio_sd_ctrl:u_audio_sd_ctrl|flow_cnt[0]                                                      ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; Yes        ; |top_audio_sd|sd_ctrl_top:u_sd_ctrl_top|sd_init:u_sd_init|cmd_bit_cnt[4]                                     ;
+; 20:1               ; 3 bits    ; 39 LEs        ; 6 LEs                ; 33 LEs                 ; Yes        ; |top_audio_sd|sd_ctrl_top:u_sd_ctrl_top|sd_read:u_sd_read|rd_ctrl_cnt[3]                                     ;
+; 7:1                ; 7 bits    ; 28 LEs        ; 7 LEs                ; 21 LEs                 ; Yes        ; |top_audio_sd|wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_dri:u_i2c_dri|cnt[6]                    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_audio_sd|sd_ctrl_top:u_sd_ctrl_top|sd_cs                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------+
+; Source assignments for fifo:u_fifo|dcfifo:dcfifo_component ;
++---------------------------------+-------+------+-----------+
+; Assignment                      ; Value ; From ; To        ;
++---------------------------------+-------+------+-----------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -         ;
++---------------------------------+-------+------+-----------+
+
+
++---------------------------------------------------------------------------------------+
+; Source assignments for fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated ;
++---------------------------------------+-------+------+--------------------------------+
+; Assignment                            ; Value ; From ; To                             ;
++---------------------------------------+-------+------+--------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION       ; OFF   ; -    ; -                              ;
+; REMOVE_DUPLICATE_REGISTERS            ; OFF   ; -    ; -                              ;
+; SYNCHRONIZER_IDENTIFICATION           ; OFF   ; -    ; -                              ;
+; SYNCHRONIZATION_REGISTER_CHAIN_LENGTH ; 2     ; -    ; -                              ;
+; POWER_UP_LEVEL                        ; LOW   ; -    ; wrptr_g                        ;
++---------------------------------------+-------+------+--------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|a_graycounter_4p6:rdptr_g1p ;
++----------------+-------+------+-----------------------------------------------------------------------------------+
+; Assignment     ; Value ; From ; To                                                                                ;
++----------------+-------+------+-----------------------------------------------------------------------------------+
+; POWER_UP_LEVEL ; HIGH  ; -    ; counter5a0                                                                        ;
+; POWER_UP_LEVEL ; HIGH  ; -    ; parity6                                                                           ;
++----------------+-------+------+-----------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|a_graycounter_07c:wrptr_g1p ;
++----------------+-------+------+-----------------------------------------------------------------------------------+
+; Assignment     ; Value ; From ; To                                                                                ;
++----------------+-------+------+-----------------------------------------------------------------------------------+
+; POWER_UP_LEVEL ; HIGH  ; -    ; counter8a0                                                                        ;
+; POWER_UP_LEVEL ; HIGH  ; -    ; parity9                                                                           ;
++----------------+-------+------+-----------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|altsyncram_q211:fifo_ram ;
++---------------------------------+--------------------+------+--------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                               ;
++---------------------------------+--------------------+------+--------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                ;
++---------------------------------+--------------------+------+--------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|alt_synch_pipe_c7d:rs_dgwp ;
++-----------------------------+------------------------+------+----------------------------------------------------+
+; Assignment                  ; Value                  ; From ; To                                                 ;
++-----------------------------+------------------------+------+----------------------------------------------------+
+; X_ON_VIOLATION_OPTION       ; OFF                    ; -    ; -                                                  ;
+; SYNCHRONIZER_IDENTIFICATION ; FORCED_IF_ASYNCHRONOUS ; -    ; -                                                  ;
++-----------------------------+------------------------+------+----------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|alt_synch_pipe_c7d:rs_dgwp|dffpipe_b09:dffpipe12 ;
++---------------------------------+-------+------+---------------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                                    ;
++---------------------------------+-------+------+---------------------------------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                     ;
++---------------------------------+-------+------+---------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|dffpipe_a09:ws_brp ;
++---------------------------------+-------+------+---------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                      ;
++---------------------------------+-------+------+---------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                       ;
++---------------------------------+-------+------+---------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|dffpipe_a09:ws_bwp ;
++---------------------------------+-------+------+---------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                      ;
++---------------------------------+-------+------+---------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                       ;
++---------------------------------+-------+------+---------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|alt_synch_pipe_d7d:ws_dgrp ;
++-----------------------------+------------------------+------+----------------------------------------------------+
+; Assignment                  ; Value                  ; From ; To                                                 ;
++-----------------------------+------------------------+------+----------------------------------------------------+
+; X_ON_VIOLATION_OPTION       ; OFF                    ; -    ; -                                                  ;
+; SYNCHRONIZER_IDENTIFICATION ; FORCED_IF_ASYNCHRONOUS ; -    ; -                                                  ;
++-----------------------------+------------------------+------+----------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|alt_synch_pipe_d7d:ws_dgrp|dffpipe_c09:dffpipe16 ;
++---------------------------------+-------+------+---------------------------------------------------------------------------------------+
+; Assignment                      ; Value ; From ; To                                                                                    ;
++---------------------------------+-------+------+---------------------------------------------------------------------------------------+
+; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                                     ;
++---------------------------------+-------+------+---------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |top_audio_sd ;
++----------------+-------------------+-----------------------------------------+
+; Parameter Name ; Value             ; Type                                    ;
++----------------+-------------------+-----------------------------------------+
+; START_ADDR     ; 00010000001000000 ; Unsigned Binary                         ;
+; AUDIO_SEC      ; 10011010011100100 ; Unsigned Binary                         ;
++----------------+-------------------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: pll_clk:u_pll_clk|altpll:altpll_component ;
++-------------------------------+---------------------------+----------------------------+
+; Parameter Name                ; Value                     ; Type                       ;
++-------------------------------+---------------------------+----------------------------+
+; OPERATION_MODE                ; NORMAL                    ; Untyped                    ;
+; PLL_TYPE                      ; AUTO                      ; Untyped                    ;
+; LPM_HINT                      ; CBX_MODULE_PREFIX=pll_clk ; Untyped                    ;
+; QUALIFY_CONF_DONE             ; OFF                       ; Untyped                    ;
+; COMPENSATE_CLOCK              ; CLK0                      ; Untyped                    ;
+; SCAN_CHAIN                    ; LONG                      ; Untyped                    ;
+; PRIMARY_CLOCK                 ; INCLK0                    ; Untyped                    ;
+; INCLK0_INPUT_FREQUENCY        ; 20000                     ; Signed Integer             ;
+; INCLK1_INPUT_FREQUENCY        ; 0                         ; Untyped                    ;
+; GATE_LOCK_SIGNAL              ; NO                        ; Untyped                    ;
+; GATE_LOCK_COUNTER             ; 0                         ; Untyped                    ;
+; LOCK_HIGH                     ; 1                         ; Untyped                    ;
+; LOCK_LOW                      ; 1                         ; Untyped                    ;
+; VALID_LOCK_MULTIPLIER         ; 1                         ; Untyped                    ;
+; INVALID_LOCK_MULTIPLIER       ; 5                         ; Untyped                    ;
+; SWITCH_OVER_ON_LOSSCLK        ; OFF                       ; Untyped                    ;
+; SWITCH_OVER_ON_GATED_LOCK     ; OFF                       ; Untyped                    ;
+; ENABLE_SWITCH_OVER_COUNTER    ; OFF                       ; Untyped                    ;
+; SKIP_VCO                      ; OFF                       ; Untyped                    ;
+; SWITCH_OVER_COUNTER           ; 0                         ; Untyped                    ;
+; SWITCH_OVER_TYPE              ; AUTO                      ; Untyped                    ;
+; FEEDBACK_SOURCE               ; EXTCLK0                   ; Untyped                    ;
+; BANDWIDTH                     ; 0                         ; Untyped                    ;
+; BANDWIDTH_TYPE                ; AUTO                      ; Untyped                    ;
+; SPREAD_FREQUENCY              ; 0                         ; Untyped                    ;
+; DOWN_SPREAD                   ; 0                         ; Untyped                    ;
+; SELF_RESET_ON_GATED_LOSS_LOCK ; OFF                       ; Untyped                    ;
+; SELF_RESET_ON_LOSS_LOCK       ; OFF                       ; Untyped                    ;
+; CLK9_MULTIPLY_BY              ; 0                         ; Untyped                    ;
+; CLK8_MULTIPLY_BY              ; 0                         ; Untyped                    ;
+; CLK7_MULTIPLY_BY              ; 0                         ; Untyped                    ;
+; CLK6_MULTIPLY_BY              ; 0                         ; Untyped                    ;
+; CLK5_MULTIPLY_BY              ; 1                         ; Untyped                    ;
+; CLK4_MULTIPLY_BY              ; 1                         ; Untyped                    ;
+; CLK3_MULTIPLY_BY              ; 1                         ; Untyped                    ;
+; CLK2_MULTIPLY_BY              ; 6                         ; Signed Integer             ;
+; CLK1_MULTIPLY_BY              ; 1                         ; Signed Integer             ;
+; CLK0_MULTIPLY_BY              ; 1                         ; Signed Integer             ;
+; CLK9_DIVIDE_BY                ; 0                         ; Untyped                    ;
+; CLK8_DIVIDE_BY                ; 0                         ; Untyped                    ;
+; CLK7_DIVIDE_BY                ; 0                         ; Untyped                    ;
+; CLK6_DIVIDE_BY                ; 0                         ; Untyped                    ;
+; CLK5_DIVIDE_BY                ; 1                         ; Untyped                    ;
+; CLK4_DIVIDE_BY                ; 1                         ; Untyped                    ;
+; CLK3_DIVIDE_BY                ; 1                         ; Untyped                    ;
+; CLK2_DIVIDE_BY                ; 25                        ; Signed Integer             ;
+; CLK1_DIVIDE_BY                ; 1                         ; Signed Integer             ;
+; CLK0_DIVIDE_BY                ; 1                         ; Signed Integer             ;
+; CLK9_PHASE_SHIFT              ; 0                         ; Untyped                    ;
+; CLK8_PHASE_SHIFT              ; 0                         ; Untyped                    ;
+; CLK7_PHASE_SHIFT              ; 0                         ; Untyped                    ;
+; CLK6_PHASE_SHIFT              ; 0                         ; Untyped                    ;
+; CLK5_PHASE_SHIFT              ; 0                         ; Untyped                    ;
+; CLK4_PHASE_SHIFT              ; 0                         ; Untyped                    ;
+; CLK3_PHASE_SHIFT              ; 0                         ; Untyped                    ;
+; CLK2_PHASE_SHIFT              ; 0                         ; Untyped                    ;
+; CLK1_PHASE_SHIFT              ; 10000                     ; Untyped                    ;
+; CLK0_PHASE_SHIFT              ; 0                         ; Untyped                    ;
+; CLK5_TIME_DELAY               ; 0                         ; Untyped                    ;
+; CLK4_TIME_DELAY               ; 0                         ; Untyped                    ;
+; CLK3_TIME_DELAY               ; 0                         ; Untyped                    ;
+; CLK2_TIME_DELAY               ; 0                         ; Untyped                    ;
+; CLK1_TIME_DELAY               ; 0                         ; Untyped                    ;
+; CLK0_TIME_DELAY               ; 0                         ; Untyped                    ;
+; CLK9_DUTY_CYCLE               ; 50                        ; Untyped                    ;
+; CLK8_DUTY_CYCLE               ; 50                        ; Untyped                    ;
+; CLK7_DUTY_CYCLE               ; 50                        ; Untyped                    ;
+; CLK6_DUTY_CYCLE               ; 50                        ; Untyped                    ;
+; CLK5_DUTY_CYCLE               ; 50                        ; Untyped                    ;
+; CLK4_DUTY_CYCLE               ; 50                        ; Untyped                    ;
+; CLK3_DUTY_CYCLE               ; 50                        ; Untyped                    ;
+; CLK2_DUTY_CYCLE               ; 50                        ; Signed Integer             ;
+; CLK1_DUTY_CYCLE               ; 50                        ; Signed Integer             ;
+; CLK0_DUTY_CYCLE               ; 50                        ; Signed Integer             ;
+; CLK9_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                    ;
+; CLK8_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                    ;
+; CLK7_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                    ;
+; CLK6_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                    ;
+; CLK5_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                    ;
+; CLK4_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                    ;
+; CLK3_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                    ;
+; CLK2_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                    ;
+; CLK1_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                    ;
+; CLK0_USE_EVEN_COUNTER_MODE    ; OFF                       ; Untyped                    ;
+; CLK9_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                    ;
+; CLK8_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                    ;
+; CLK7_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                    ;
+; CLK6_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                    ;
+; CLK5_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                    ;
+; CLK4_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                    ;
+; CLK3_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                    ;
+; CLK2_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                    ;
+; CLK1_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                    ;
+; CLK0_USE_EVEN_COUNTER_VALUE   ; OFF                       ; Untyped                    ;
+; LOCK_WINDOW_UI                ;  0.05                     ; Untyped                    ;
+; LOCK_WINDOW_UI_BITS           ; UNUSED                    ; Untyped                    ;
+; VCO_RANGE_DETECTOR_LOW_BITS   ; UNUSED                    ; Untyped                    ;
+; VCO_RANGE_DETECTOR_HIGH_BITS  ; UNUSED                    ; Untyped                    ;
+; DPA_MULTIPLY_BY               ; 0                         ; Untyped                    ;
+; DPA_DIVIDE_BY                 ; 1                         ; Untyped                    ;
+; DPA_DIVIDER                   ; 0                         ; Untyped                    ;
+; EXTCLK3_MULTIPLY_BY           ; 1                         ; Untyped                    ;
+; EXTCLK2_MULTIPLY_BY           ; 1                         ; Untyped                    ;
+; EXTCLK1_MULTIPLY_BY           ; 1                         ; Untyped                    ;
+; EXTCLK0_MULTIPLY_BY           ; 1                         ; Untyped                    ;
+; EXTCLK3_DIVIDE_BY             ; 1                         ; Untyped                    ;
+; EXTCLK2_DIVIDE_BY             ; 1                         ; Untyped                    ;
+; EXTCLK1_DIVIDE_BY             ; 1                         ; Untyped                    ;
+; EXTCLK0_DIVIDE_BY             ; 1                         ; Untyped                    ;
+; EXTCLK3_PHASE_SHIFT           ; 0                         ; Untyped                    ;
+; EXTCLK2_PHASE_SHIFT           ; 0                         ; Untyped                    ;
+; EXTCLK1_PHASE_SHIFT           ; 0                         ; Untyped                    ;
+; EXTCLK0_PHASE_SHIFT           ; 0                         ; Untyped                    ;
+; EXTCLK3_TIME_DELAY            ; 0                         ; Untyped                    ;
+; EXTCLK2_TIME_DELAY            ; 0                         ; Untyped                    ;
+; EXTCLK1_TIME_DELAY            ; 0                         ; Untyped                    ;
+; EXTCLK0_TIME_DELAY            ; 0                         ; Untyped                    ;
+; EXTCLK3_DUTY_CYCLE            ; 50                        ; Untyped                    ;
+; EXTCLK2_DUTY_CYCLE            ; 50                        ; Untyped                    ;
+; EXTCLK1_DUTY_CYCLE            ; 50                        ; Untyped                    ;
+; EXTCLK0_DUTY_CYCLE            ; 50                        ; Untyped                    ;
+; VCO_MULTIPLY_BY               ; 0                         ; Untyped                    ;
+; VCO_DIVIDE_BY                 ; 0                         ; Untyped                    ;
+; SCLKOUT0_PHASE_SHIFT          ; 0                         ; Untyped                    ;
+; SCLKOUT1_PHASE_SHIFT          ; 0                         ; Untyped                    ;
+; VCO_MIN                       ; 0                         ; Untyped                    ;
+; VCO_MAX                       ; 0                         ; Untyped                    ;
+; VCO_CENTER                    ; 0                         ; Untyped                    ;
+; PFD_MIN                       ; 0                         ; Untyped                    ;
+; PFD_MAX                       ; 0                         ; Untyped                    ;
+; M_INITIAL                     ; 0                         ; Untyped                    ;
+; M                             ; 0                         ; Untyped                    ;
+; N                             ; 1                         ; Untyped                    ;
+; M2                            ; 1                         ; Untyped                    ;
+; N2                            ; 1                         ; Untyped                    ;
+; SS                            ; 1                         ; Untyped                    ;
+; C0_HIGH                       ; 0                         ; Untyped                    ;
+; C1_HIGH                       ; 0                         ; Untyped                    ;
+; C2_HIGH                       ; 0                         ; Untyped                    ;
+; C3_HIGH                       ; 0                         ; Untyped                    ;
+; C4_HIGH                       ; 0                         ; Untyped                    ;
+; C5_HIGH                       ; 0                         ; Untyped                    ;
+; C6_HIGH                       ; 0                         ; Untyped                    ;
+; C7_HIGH                       ; 0                         ; Untyped                    ;
+; C8_HIGH                       ; 0                         ; Untyped                    ;
+; C9_HIGH                       ; 0                         ; Untyped                    ;
+; C0_LOW                        ; 0                         ; Untyped                    ;
+; C1_LOW                        ; 0                         ; Untyped                    ;
+; C2_LOW                        ; 0                         ; Untyped                    ;
+; C3_LOW                        ; 0                         ; Untyped                    ;
+; C4_LOW                        ; 0                         ; Untyped                    ;
+; C5_LOW                        ; 0                         ; Untyped                    ;
+; C6_LOW                        ; 0                         ; Untyped                    ;
+; C7_LOW                        ; 0                         ; Untyped                    ;
+; C8_LOW                        ; 0                         ; Untyped                    ;
+; C9_LOW                        ; 0                         ; Untyped                    ;
+; C0_INITIAL                    ; 0                         ; Untyped                    ;
+; C1_INITIAL                    ; 0                         ; Untyped                    ;
+; C2_INITIAL                    ; 0                         ; Untyped                    ;
+; C3_INITIAL                    ; 0                         ; Untyped                    ;
+; C4_INITIAL                    ; 0                         ; Untyped                    ;
+; C5_INITIAL                    ; 0                         ; Untyped                    ;
+; C6_INITIAL                    ; 0                         ; Untyped                    ;
+; C7_INITIAL                    ; 0                         ; Untyped                    ;
+; C8_INITIAL                    ; 0                         ; Untyped                    ;
+; C9_INITIAL                    ; 0                         ; Untyped                    ;
+; C0_MODE                       ; BYPASS                    ; Untyped                    ;
+; C1_MODE                       ; BYPASS                    ; Untyped                    ;
+; C2_MODE                       ; BYPASS                    ; Untyped                    ;
+; C3_MODE                       ; BYPASS                    ; Untyped                    ;
+; C4_MODE                       ; BYPASS                    ; Untyped                    ;
+; C5_MODE                       ; BYPASS                    ; Untyped                    ;
+; C6_MODE                       ; BYPASS                    ; Untyped                    ;
+; C7_MODE                       ; BYPASS                    ; Untyped                    ;
+; C8_MODE                       ; BYPASS                    ; Untyped                    ;
+; C9_MODE                       ; BYPASS                    ; Untyped                    ;
+; C0_PH                         ; 0                         ; Untyped                    ;
+; C1_PH                         ; 0                         ; Untyped                    ;
+; C2_PH                         ; 0                         ; Untyped                    ;
+; C3_PH                         ; 0                         ; Untyped                    ;
+; C4_PH                         ; 0                         ; Untyped                    ;
+; C5_PH                         ; 0                         ; Untyped                    ;
+; C6_PH                         ; 0                         ; Untyped                    ;
+; C7_PH                         ; 0                         ; Untyped                    ;
+; C8_PH                         ; 0                         ; Untyped                    ;
+; C9_PH                         ; 0                         ; Untyped                    ;
+; L0_HIGH                       ; 1                         ; Untyped                    ;
+; L1_HIGH                       ; 1                         ; Untyped                    ;
+; G0_HIGH                       ; 1                         ; Untyped                    ;
+; G1_HIGH                       ; 1                         ; Untyped                    ;
+; G2_HIGH                       ; 1                         ; Untyped                    ;
+; G3_HIGH                       ; 1                         ; Untyped                    ;
+; E0_HIGH                       ; 1                         ; Untyped                    ;
+; E1_HIGH                       ; 1                         ; Untyped                    ;
+; E2_HIGH                       ; 1                         ; Untyped                    ;
+; E3_HIGH                       ; 1                         ; Untyped                    ;
+; L0_LOW                        ; 1                         ; Untyped                    ;
+; L1_LOW                        ; 1                         ; Untyped                    ;
+; G0_LOW                        ; 1                         ; Untyped                    ;
+; G1_LOW                        ; 1                         ; Untyped                    ;
+; G2_LOW                        ; 1                         ; Untyped                    ;
+; G3_LOW                        ; 1                         ; Untyped                    ;
+; E0_LOW                        ; 1                         ; Untyped                    ;
+; E1_LOW                        ; 1                         ; Untyped                    ;
+; E2_LOW                        ; 1                         ; Untyped                    ;
+; E3_LOW                        ; 1                         ; Untyped                    ;
+; L0_INITIAL                    ; 1                         ; Untyped                    ;
+; L1_INITIAL                    ; 1                         ; Untyped                    ;
+; G0_INITIAL                    ; 1                         ; Untyped                    ;
+; G1_INITIAL                    ; 1                         ; Untyped                    ;
+; G2_INITIAL                    ; 1                         ; Untyped                    ;
+; G3_INITIAL                    ; 1                         ; Untyped                    ;
+; E0_INITIAL                    ; 1                         ; Untyped                    ;
+; E1_INITIAL                    ; 1                         ; Untyped                    ;
+; E2_INITIAL                    ; 1                         ; Untyped                    ;
+; E3_INITIAL                    ; 1                         ; Untyped                    ;
+; L0_MODE                       ; BYPASS                    ; Untyped                    ;
+; L1_MODE                       ; BYPASS                    ; Untyped                    ;
+; G0_MODE                       ; BYPASS                    ; Untyped                    ;
+; G1_MODE                       ; BYPASS                    ; Untyped                    ;
+; G2_MODE                       ; BYPASS                    ; Untyped                    ;
+; G3_MODE                       ; BYPASS                    ; Untyped                    ;
+; E0_MODE                       ; BYPASS                    ; Untyped                    ;
+; E1_MODE                       ; BYPASS                    ; Untyped                    ;
+; E2_MODE                       ; BYPASS                    ; Untyped                    ;
+; E3_MODE                       ; BYPASS                    ; Untyped                    ;
+; L0_PH                         ; 0                         ; Untyped                    ;
+; L1_PH                         ; 0                         ; Untyped                    ;
+; G0_PH                         ; 0                         ; Untyped                    ;
+; G1_PH                         ; 0                         ; Untyped                    ;
+; G2_PH                         ; 0                         ; Untyped                    ;
+; G3_PH                         ; 0                         ; Untyped                    ;
+; E0_PH                         ; 0                         ; Untyped                    ;
+; E1_PH                         ; 0                         ; Untyped                    ;
+; E2_PH                         ; 0                         ; Untyped                    ;
+; E3_PH                         ; 0                         ; Untyped                    ;
+; M_PH                          ; 0                         ; Untyped                    ;
+; C1_USE_CASC_IN                ; OFF                       ; Untyped                    ;
+; C2_USE_CASC_IN                ; OFF                       ; Untyped                    ;
+; C3_USE_CASC_IN                ; OFF                       ; Untyped                    ;
+; C4_USE_CASC_IN                ; OFF                       ; Untyped                    ;
+; C5_USE_CASC_IN                ; OFF                       ; Untyped                    ;
+; C6_USE_CASC_IN                ; OFF                       ; Untyped                    ;
+; C7_USE_CASC_IN                ; OFF                       ; Untyped                    ;
+; C8_USE_CASC_IN                ; OFF                       ; Untyped                    ;
+; C9_USE_CASC_IN                ; OFF                       ; Untyped                    ;
+; CLK0_COUNTER                  ; G0                        ; Untyped                    ;
+; CLK1_COUNTER                  ; G0                        ; Untyped                    ;
+; CLK2_COUNTER                  ; G0                        ; Untyped                    ;
+; CLK3_COUNTER                  ; G0                        ; Untyped                    ;
+; CLK4_COUNTER                  ; G0                        ; Untyped                    ;
+; CLK5_COUNTER                  ; G0                        ; Untyped                    ;
+; CLK6_COUNTER                  ; E0                        ; Untyped                    ;
+; CLK7_COUNTER                  ; E1                        ; Untyped                    ;
+; CLK8_COUNTER                  ; E2                        ; Untyped                    ;
+; CLK9_COUNTER                  ; E3                        ; Untyped                    ;
+; L0_TIME_DELAY                 ; 0                         ; Untyped                    ;
+; L1_TIME_DELAY                 ; 0                         ; Untyped                    ;
+; G0_TIME_DELAY                 ; 0                         ; Untyped                    ;
+; G1_TIME_DELAY                 ; 0                         ; Untyped                    ;
+; G2_TIME_DELAY                 ; 0                         ; Untyped                    ;
+; G3_TIME_DELAY                 ; 0                         ; Untyped                    ;
+; E0_TIME_DELAY                 ; 0                         ; Untyped                    ;
+; E1_TIME_DELAY                 ; 0                         ; Untyped                    ;
+; E2_TIME_DELAY                 ; 0                         ; Untyped                    ;
+; E3_TIME_DELAY                 ; 0                         ; Untyped                    ;
+; M_TIME_DELAY                  ; 0                         ; Untyped                    ;
+; N_TIME_DELAY                  ; 0                         ; Untyped                    ;
+; EXTCLK3_COUNTER               ; E3                        ; Untyped                    ;
+; EXTCLK2_COUNTER               ; E2                        ; Untyped                    ;
+; EXTCLK1_COUNTER               ; E1                        ; Untyped                    ;
+; EXTCLK0_COUNTER               ; E0                        ; Untyped                    ;
+; ENABLE0_COUNTER               ; L0                        ; Untyped                    ;
+; ENABLE1_COUNTER               ; L0                        ; Untyped                    ;
+; CHARGE_PUMP_CURRENT           ; 2                         ; Untyped                    ;
+; LOOP_FILTER_R                 ;  1.000000                 ; Untyped                    ;
+; LOOP_FILTER_C                 ; 5                         ; Untyped                    ;
+; CHARGE_PUMP_CURRENT_BITS      ; 9999                      ; Untyped                    ;
+; LOOP_FILTER_R_BITS            ; 9999                      ; Untyped                    ;
+; LOOP_FILTER_C_BITS            ; 9999                      ; Untyped                    ;
+; VCO_POST_SCALE                ; 0                         ; Untyped                    ;
+; CLK2_OUTPUT_FREQUENCY         ; 0                         ; Untyped                    ;
+; CLK1_OUTPUT_FREQUENCY         ; 0                         ; Untyped                    ;
+; CLK0_OUTPUT_FREQUENCY         ; 0                         ; Untyped                    ;
+; INTENDED_DEVICE_FAMILY        ; Cyclone IV E              ; Untyped                    ;
+; PORT_CLKENA0                  ; PORT_UNUSED               ; Untyped                    ;
+; PORT_CLKENA1                  ; PORT_UNUSED               ; Untyped                    ;
+; PORT_CLKENA2                  ; PORT_UNUSED               ; Untyped                    ;
+; PORT_CLKENA3                  ; PORT_UNUSED               ; Untyped                    ;
+; PORT_CLKENA4                  ; PORT_UNUSED               ; Untyped                    ;
+; PORT_CLKENA5                  ; PORT_UNUSED               ; Untyped                    ;
+; PORT_EXTCLKENA0               ; PORT_CONNECTIVITY         ; Untyped                    ;
+; PORT_EXTCLKENA1               ; PORT_CONNECTIVITY         ; Untyped                    ;
+; PORT_EXTCLKENA2               ; PORT_CONNECTIVITY         ; Untyped                    ;
+; PORT_EXTCLKENA3               ; PORT_CONNECTIVITY         ; Untyped                    ;
+; PORT_EXTCLK0                  ; PORT_UNUSED               ; Untyped                    ;
+; PORT_EXTCLK1                  ; PORT_UNUSED               ; Untyped                    ;
+; PORT_EXTCLK2                  ; PORT_UNUSED               ; Untyped                    ;
+; PORT_EXTCLK3                  ; PORT_UNUSED               ; Untyped                    ;
+; PORT_CLKBAD0                  ; PORT_UNUSED               ; Untyped                    ;
+; PORT_CLKBAD1                  ; PORT_UNUSED               ; Untyped                    ;
+; PORT_CLK0                     ; PORT_USED                 ; Untyped                    ;
+; PORT_CLK1                     ; PORT_USED                 ; Untyped                    ;
+; PORT_CLK2                     ; PORT_USED                 ; Untyped                    ;
+; PORT_CLK3                     ; PORT_UNUSED               ; Untyped                    ;
+; PORT_CLK4                     ; PORT_UNUSED               ; Untyped                    ;
+; PORT_CLK5                     ; PORT_UNUSED               ; Untyped                    ;
+; PORT_CLK6                     ; PORT_UNUSED               ; Untyped                    ;
+; PORT_CLK7                     ; PORT_UNUSED               ; Untyped                    ;
+; PORT_CLK8                     ; PORT_UNUSED               ; Untyped                    ;
+; PORT_CLK9                     ; PORT_UNUSED               ; Untyped                    ;
+; PORT_SCANDATA                 ; PORT_UNUSED               ; Untyped                    ;
+; PORT_SCANDATAOUT              ; PORT_UNUSED               ; Untyped                    ;
+; PORT_SCANDONE                 ; PORT_UNUSED               ; Untyped                    ;
+; PORT_SCLKOUT1                 ; PORT_CONNECTIVITY         ; Untyped                    ;
+; PORT_SCLKOUT0                 ; PORT_CONNECTIVITY         ; Untyped                    ;
+; PORT_ACTIVECLOCK              ; PORT_UNUSED               ; Untyped                    ;
+; PORT_CLKLOSS                  ; PORT_UNUSED               ; Untyped                    ;
+; PORT_INCLK1                   ; PORT_UNUSED               ; Untyped                    ;
+; PORT_INCLK0                   ; PORT_USED                 ; Untyped                    ;
+; PORT_FBIN                     ; PORT_UNUSED               ; Untyped                    ;
+; PORT_PLLENA                   ; PORT_UNUSED               ; Untyped                    ;
+; PORT_CLKSWITCH                ; PORT_UNUSED               ; Untyped                    ;
+; PORT_ARESET                   ; PORT_USED                 ; Untyped                    ;
+; PORT_PFDENA                   ; PORT_UNUSED               ; Untyped                    ;
+; PORT_SCANCLK                  ; PORT_UNUSED               ; Untyped                    ;
+; PORT_SCANACLR                 ; PORT_UNUSED               ; Untyped                    ;
+; PORT_SCANREAD                 ; PORT_UNUSED               ; Untyped                    ;
+; PORT_SCANWRITE                ; PORT_UNUSED               ; Untyped                    ;
+; PORT_ENABLE0                  ; PORT_CONNECTIVITY         ; Untyped                    ;
+; PORT_ENABLE1                  ; PORT_CONNECTIVITY         ; Untyped                    ;
+; PORT_LOCKED                   ; PORT_USED                 ; Untyped                    ;
+; PORT_CONFIGUPDATE             ; PORT_UNUSED               ; Untyped                    ;
+; PORT_FBOUT                    ; PORT_CONNECTIVITY         ; Untyped                    ;
+; PORT_PHASEDONE                ; PORT_UNUSED               ; Untyped                    ;
+; PORT_PHASESTEP                ; PORT_UNUSED               ; Untyped                    ;
+; PORT_PHASEUPDOWN              ; PORT_UNUSED               ; Untyped                    ;
+; PORT_SCANCLKENA               ; PORT_UNUSED               ; Untyped                    ;
+; PORT_PHASECOUNTERSELECT       ; PORT_UNUSED               ; Untyped                    ;
+; PORT_VCOOVERRANGE             ; PORT_CONNECTIVITY         ; Untyped                    ;
+; PORT_VCOUNDERRANGE            ; PORT_CONNECTIVITY         ; Untyped                    ;
+; M_TEST_SOURCE                 ; 5                         ; Untyped                    ;
+; C0_TEST_SOURCE                ; 5                         ; Untyped                    ;
+; C1_TEST_SOURCE                ; 5                         ; Untyped                    ;
+; C2_TEST_SOURCE                ; 5                         ; Untyped                    ;
+; C3_TEST_SOURCE                ; 5                         ; Untyped                    ;
+; C4_TEST_SOURCE                ; 5                         ; Untyped                    ;
+; C5_TEST_SOURCE                ; 5                         ; Untyped                    ;
+; C6_TEST_SOURCE                ; 5                         ; Untyped                    ;
+; C7_TEST_SOURCE                ; 5                         ; Untyped                    ;
+; C8_TEST_SOURCE                ; 5                         ; Untyped                    ;
+; C9_TEST_SOURCE                ; 5                         ; Untyped                    ;
+; CBXI_PARAMETER                ; pll_clk_altpll            ; Untyped                    ;
+; VCO_FREQUENCY_CONTROL         ; AUTO                      ; Untyped                    ;
+; VCO_PHASE_SHIFT_STEP          ; 0                         ; Untyped                    ;
+; WIDTH_CLOCK                   ; 5                         ; Signed Integer             ;
+; WIDTH_PHASECOUNTERSELECT      ; 4                         ; Untyped                    ;
+; USING_FBMIMICBIDIR_PORT       ; OFF                       ; Untyped                    ;
+; DEVICE_FAMILY                 ; Cyclone IV E              ; Untyped                    ;
+; SCAN_CHAIN_MIF_FILE           ; UNUSED                    ; Untyped                    ;
+; SIM_GATE_LOCK_DEVICE_BEHAVIOR ; OFF                       ; Untyped                    ;
+; AUTO_CARRY_CHAINS             ; ON                        ; AUTO_CARRY                 ;
+; IGNORE_CARRY_BUFFERS          ; OFF                       ; IGNORE_CARRY               ;
+; AUTO_CASCADE_CHAINS           ; ON                        ; AUTO_CASCADE               ;
+; IGNORE_CASCADE_BUFFERS        ; OFF                       ; IGNORE_CASCADE             ;
++-------------------------------+---------------------------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sd_ctrl_top:u_sd_ctrl_top|sd_init:u_sd_init ;
++----------------+--------------------------------------------------+----------------------+
+; Parameter Name ; Value                                            ; Type                 ;
++----------------+--------------------------------------------------+----------------------+
+; CMD0           ; 010000000000000000000000000000000000000010010101 ; Unsigned Binary      ;
+; CMD8           ; 010010000000000000000000000000011010101010000111 ; Unsigned Binary      ;
+; CMD55          ; 011101110000000000000000000000000000000011111111 ; Unsigned Binary      ;
+; ACMD41         ; 011010010100000000000000000000000000000011111111 ; Unsigned Binary      ;
+; POWER_ON_NUM   ; 74                                               ; Signed Integer       ;
+; OVER_TIME_NUM  ; 1011111010111100001000000                        ; Unsigned Binary      ;
+; st_idle        ; 0000001                                          ; Unsigned Binary      ;
+; st_send_cmd0   ; 0000010                                          ; Unsigned Binary      ;
+; st_wait_cmd0   ; 0000100                                          ; Unsigned Binary      ;
+; st_send_cmd8   ; 0001000                                          ; Unsigned Binary      ;
+; st_send_cmd55  ; 0010000                                          ; Unsigned Binary      ;
+; st_send_acmd41 ; 0100000                                          ; Unsigned Binary      ;
+; st_init_done   ; 1000000                                          ; Unsigned Binary      ;
++----------------+--------------------------------------------------+----------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write ;
++----------------+----------+----------------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                           ;
++----------------+----------+----------------------------------------------------------------+
+; HEAD_BYTE      ; 11111110 ; Unsigned Binary                                                ;
++----------------+----------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fifo:u_fifo|dcfifo:dcfifo_component ;
++-------------------------+--------------+-----------------------------------------+
+; Parameter Name          ; Value        ; Type                                    ;
++-------------------------+--------------+-----------------------------------------+
+; WIDTH_BYTEENA           ; 1            ; Untyped                                 ;
+; AUTO_CARRY_CHAINS       ; ON           ; AUTO_CARRY                              ;
+; IGNORE_CARRY_BUFFERS    ; OFF          ; IGNORE_CARRY                            ;
+; AUTO_CASCADE_CHAINS     ; ON           ; AUTO_CASCADE                            ;
+; IGNORE_CASCADE_BUFFERS  ; OFF          ; IGNORE_CASCADE                          ;
+; LPM_WIDTH               ; 16           ; Signed Integer                          ;
+; LPM_NUMWORDS            ; 1024         ; Signed Integer                          ;
+; LPM_WIDTHU              ; 10           ; Signed Integer                          ;
+; LPM_SHOWAHEAD           ; OFF          ; Untyped                                 ;
+; UNDERFLOW_CHECKING      ; ON           ; Untyped                                 ;
+; OVERFLOW_CHECKING       ; ON           ; Untyped                                 ;
+; USE_EAB                 ; ON           ; Untyped                                 ;
+; ADD_RAM_OUTPUT_REGISTER ; OFF          ; Untyped                                 ;
+; DELAY_RDUSEDW           ; 1            ; Untyped                                 ;
+; DELAY_WRUSEDW           ; 1            ; Untyped                                 ;
+; RDSYNC_DELAYPIPE        ; 4            ; Signed Integer                          ;
+; WRSYNC_DELAYPIPE        ; 4            ; Signed Integer                          ;
+; CLOCKS_ARE_SYNCHRONIZED ; FALSE        ; Untyped                                 ;
+; MAXIMIZE_SPEED          ; 5            ; Untyped                                 ;
+; DEVICE_FAMILY           ; Cyclone IV E ; Untyped                                 ;
+; ADD_USEDW_MSB_BIT       ; OFF          ; Untyped                                 ;
+; WRITE_ACLR_SYNCH        ; OFF          ; Untyped                                 ;
+; READ_ACLR_SYNCH         ; OFF          ; Untyped                                 ;
+; CBXI_PARAMETER          ; dcfifo_s3f1  ; Untyped                                 ;
++-------------------------+--------------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: wm8978_ctrl:u_wm8978 ;
++----------------+--------+-----------------------------------------+
+; Parameter Name ; Value  ; Type                                    ;
++----------------+--------+-----------------------------------------+
+; WL             ; 010000 ; Unsigned Binary                         ;
++----------------+--------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config ;
++----------------+----------------------------+---------------------------------------------------+
+; Parameter Name ; Value                      ; Type                                              ;
++----------------+----------------------------+---------------------------------------------------+
+; SLAVE_ADDR     ; 0011010                    ; Unsigned Binary                                   ;
+; WL             ; 100000                     ; Unsigned Binary                                   ;
+; BIT_CTRL       ; 0                          ; Unsigned Binary                                   ;
+; CLK_FREQ       ; 10111110101111000010000000 ; Unsigned Binary                                   ;
+; I2C_FREQ       ; 111101000010010000         ; Unsigned Binary                                   ;
++----------------+----------------------------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_dri:u_i2c_dri ;
++----------------+----------------------------+---------------------------------------------------------------------+
+; Parameter Name ; Value                      ; Type                                                                ;
++----------------+----------------------------+---------------------------------------------------------------------+
+; SLAVE_ADDR     ; 0011010                    ; Unsigned Binary                                                     ;
+; CLK_FREQ       ; 10111110101111000010000000 ; Unsigned Binary                                                     ;
+; I2C_FREQ       ; 111101000010010000         ; Unsigned Binary                                                     ;
++----------------+----------------------------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_reg_cfg:u_i2c_reg_cfg ;
++----------------+--------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                                            ;
++----------------+--------+-------------------------------------------------------------------------------------------------+
+; WL             ; 100000 ; Unsigned Binary                                                                                 ;
++----------------+--------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: wm8978_ctrl:u_wm8978|audio_receive:u_audio_receive ;
++----------------+--------+-----------------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                                  ;
++----------------+--------+-----------------------------------------------------------------------+
+; WL             ; 010000 ; Unsigned Binary                                                       ;
++----------------+--------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: wm8978_ctrl:u_wm8978|audio_send:u_audio_send ;
++----------------+--------+-----------------------------------------------------------------+
+; Parameter Name ; Value  ; Type                                                            ;
++----------------+--------+-----------------------------------------------------------------+
+; WL             ; 010000 ; Unsigned Binary                                                 ;
++----------------+--------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: audio_sd_ctrl:u_audio_sd_ctrl ;
++----------------+-------------------+---------------------------------------+
+; Parameter Name ; Value             ; Type                                  ;
++----------------+-------------------+---------------------------------------+
+; START_ADDR     ; 00010000001000000 ; Unsigned Binary                       ;
+; AUDIO_SEC      ; 10011010011100100 ; Unsigned Binary                       ;
++----------------+-------------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; altpll Parameter Settings by Entity Instance                              ;
++-------------------------------+-------------------------------------------+
+; Name                          ; Value                                     ;
++-------------------------------+-------------------------------------------+
+; Number of entity instances    ; 1                                         ;
+; Entity Instance               ; pll_clk:u_pll_clk|altpll:altpll_component ;
+;     -- OPERATION_MODE         ; NORMAL                                    ;
+;     -- PLL_TYPE               ; AUTO                                      ;
+;     -- PRIMARY_CLOCK          ; INCLK0                                    ;
+;     -- INCLK0_INPUT_FREQUENCY ; 20000                                     ;
+;     -- INCLK1_INPUT_FREQUENCY ; 0                                         ;
+;     -- VCO_MULTIPLY_BY        ; 0                                         ;
+;     -- VCO_DIVIDE_BY          ; 0                                         ;
++-------------------------------+-------------------------------------------+
+
+
++------------------------------------------------------------------+
+; dcfifo Parameter Settings by Entity Instance                     ;
++----------------------------+-------------------------------------+
+; Name                       ; Value                               ;
++----------------------------+-------------------------------------+
+; Number of entity instances ; 1                                   ;
+; Entity Instance            ; fifo:u_fifo|dcfifo:dcfifo_component ;
+;     -- FIFO Type           ; Dual Clock                          ;
+;     -- LPM_WIDTH           ; 16                                  ;
+;     -- LPM_NUMWORDS        ; 1024                                ;
+;     -- LPM_SHOWAHEAD       ; OFF                                 ;
+;     -- USE_EAB             ; ON                                  ;
++----------------------------+-------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_reg_cfg:u_i2c_reg_cfg"           ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; cfg_done ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_dri:u_i2c_dri"                                                                                    ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                            ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+; bit_ctrl   ; Input  ; Info     ; Stuck at GND                                                                                                                                       ;
+; i2c_rh_wl  ; Input  ; Info     ; Stuck at GND                                                                                                                                       ;
+; i2c_addr   ; Input  ; Warning  ; Input port expression (8 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "i2c_addr[15..8]" will be connected to GND. ;
+; i2c_data_r ; Output ; Info     ; Explicitly unconnected                                                                                                                             ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "wm8978_ctrl:u_wm8978"        ;
++------------+--------+----------+------------------------+
+; Port       ; Type   ; Severity ; Details                ;
++------------+--------+----------+------------------------+
+; aud_adcdat ; Input  ; Info     ; Explicitly unconnected ;
+; adc_data   ; Output ; Info     ; Explicitly unconnected ;
+; rx_done    ; Output ; Info     ; Explicitly unconnected ;
++------------+--------+----------+------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sd_ctrl_top:u_sd_ctrl_top"                                                                                                                                                                     ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                                                                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; wr_start_en     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts.  ;
+; wr_start_en[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; wr_sec_addr     ; Input  ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; wr_data         ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; wr_data[15..0]  ; Input  ; Info     ; Stuck at GND                                                                                                                                                                        ;
+; wr_req          ; Output ; Info     ; Explicitly unconnected                                                                                                                                                              ;
+; wr_busy         ; Output ; Info     ; Explicitly unconnected                                                                                                                                                              ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+    Info: Processing started: Thu Jan 17 18:20:07 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_audio_sd -c top_audio_sd
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /verilog/top_audio_sd/rtl/wm8978/wm8978_ctrl.v
+    Info (12023): Found entity 1: wm8978_ctrl
+Info (12021): Found 1 design units, including 1 entities, in source file /verilog/top_audio_sd/rtl/wm8978/wm8978_config.v
+    Info (12023): Found entity 1: wm8978_config
+Info (12021): Found 1 design units, including 1 entities, in source file /verilog/top_audio_sd/rtl/wm8978/i2c_reg_cfg.v
+    Info (12023): Found entity 1: i2c_reg_cfg
+Info (12021): Found 1 design units, including 1 entities, in source file /verilog/top_audio_sd/rtl/wm8978/i2c_dri.v
+    Info (12023): Found entity 1: i2c_dri
+Info (12021): Found 1 design units, including 1 entities, in source file /verilog/top_audio_sd/rtl/wm8978/audio_send.v
+    Info (12023): Found entity 1: audio_send
+Info (12021): Found 1 design units, including 1 entities, in source file /verilog/top_audio_sd/rtl/wm8978/audio_receive.v
+    Info (12023): Found entity 1: audio_receive
+Info (12021): Found 1 design units, including 1 entities, in source file /verilog/top_audio_sd/rtl/top_audio_sd.v
+    Info (12023): Found entity 1: top_audio_sd
+Info (12021): Found 1 design units, including 1 entities, in source file /verilog/top_audio_sd/rtl/sd/sd_write.v
+    Info (12023): Found entity 1: sd_write
+Info (12021): Found 1 design units, including 1 entities, in source file /verilog/top_audio_sd/rtl/sd/sd_read.v
+    Info (12023): Found entity 1: sd_read
+Info (12021): Found 1 design units, including 1 entities, in source file /verilog/top_audio_sd/rtl/sd/sd_init.v
+    Info (12023): Found entity 1: sd_init
+Info (12021): Found 1 design units, including 1 entities, in source file /verilog/top_audio_sd/rtl/sd/sd_ctrl_top.v
+    Info (12023): Found entity 1: sd_ctrl_top
+Info (12021): Found 1 design units, including 1 entities, in source file /verilog/top_audio_sd/rtl/audio_sd_ctrl.v
+    Info (12023): Found entity 1: audio_sd_ctrl
+Info (12021): Found 1 design units, including 1 entities, in source file ipcore/pll_clk.v
+    Info (12023): Found entity 1: pll_clk
+Info (12021): Found 1 design units, including 1 entities, in source file ipcore/fifo.v
+    Info (12023): Found entity 1: fifo
+Info (12127): Elaborating entity "top_audio_sd" for the top level hierarchy
+Info (12128): Elaborating entity "pll_clk" for hierarchy "pll_clk:u_pll_clk"
+Info (12128): Elaborating entity "altpll" for hierarchy "pll_clk:u_pll_clk|altpll:altpll_component"
+Info (12130): Elaborated megafunction instantiation "pll_clk:u_pll_clk|altpll:altpll_component"
+Info (12133): Instantiated megafunction "pll_clk:u_pll_clk|altpll:altpll_component" with the following parameter:
+    Info (12134): Parameter "bandwidth_type" = "AUTO"
+    Info (12134): Parameter "clk0_divide_by" = "1"
+    Info (12134): Parameter "clk0_duty_cycle" = "50"
+    Info (12134): Parameter "clk0_multiply_by" = "1"
+    Info (12134): Parameter "clk0_phase_shift" = "0"
+    Info (12134): Parameter "clk1_divide_by" = "1"
+    Info (12134): Parameter "clk1_duty_cycle" = "50"
+    Info (12134): Parameter "clk1_multiply_by" = "1"
+    Info (12134): Parameter "clk1_phase_shift" = "10000"
+    Info (12134): Parameter "clk2_divide_by" = "25"
+    Info (12134): Parameter "clk2_duty_cycle" = "50"
+    Info (12134): Parameter "clk2_multiply_by" = "6"
+    Info (12134): Parameter "clk2_phase_shift" = "0"
+    Info (12134): Parameter "compensate_clock" = "CLK0"
+    Info (12134): Parameter "inclk0_input_frequency" = "20000"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_hint" = "CBX_MODULE_PREFIX=pll_clk"
+    Info (12134): Parameter "lpm_type" = "altpll"
+    Info (12134): Parameter "operation_mode" = "NORMAL"
+    Info (12134): Parameter "pll_type" = "AUTO"
+    Info (12134): Parameter "port_activeclock" = "PORT_UNUSED"
+    Info (12134): Parameter "port_areset" = "PORT_USED"
+    Info (12134): Parameter "port_clkbad0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkbad1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkloss" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkswitch" = "PORT_UNUSED"
+    Info (12134): Parameter "port_configupdate" = "PORT_UNUSED"
+    Info (12134): Parameter "port_fbin" = "PORT_UNUSED"
+    Info (12134): Parameter "port_inclk0" = "PORT_USED"
+    Info (12134): Parameter "port_inclk1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_locked" = "PORT_USED"
+    Info (12134): Parameter "port_pfdena" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phasecounterselect" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phasedone" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phasestep" = "PORT_UNUSED"
+    Info (12134): Parameter "port_phaseupdown" = "PORT_UNUSED"
+    Info (12134): Parameter "port_pllena" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanaclr" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanclk" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanclkena" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scandata" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scandataout" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scandone" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanread" = "PORT_UNUSED"
+    Info (12134): Parameter "port_scanwrite" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk0" = "PORT_USED"
+    Info (12134): Parameter "port_clk1" = "PORT_USED"
+    Info (12134): Parameter "port_clk2" = "PORT_USED"
+    Info (12134): Parameter "port_clk3" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk4" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clk5" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena2" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena3" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena4" = "PORT_UNUSED"
+    Info (12134): Parameter "port_clkena5" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk0" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk2" = "PORT_UNUSED"
+    Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
+    Info (12134): Parameter "self_reset_on_loss_lock" = "OFF"
+    Info (12134): Parameter "width_clock" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/pll_clk_altpll.v
+    Info (12023): Found entity 1: pll_clk_altpll
+Info (12128): Elaborating entity "pll_clk_altpll" for hierarchy "pll_clk:u_pll_clk|altpll:altpll_component|pll_clk_altpll:auto_generated"
+Info (12128): Elaborating entity "sd_ctrl_top" for hierarchy "sd_ctrl_top:u_sd_ctrl_top"
+Info (12128): Elaborating entity "sd_init" for hierarchy "sd_ctrl_top:u_sd_ctrl_top|sd_init:u_sd_init"
+Info (12128): Elaborating entity "sd_write" for hierarchy "sd_ctrl_top:u_sd_ctrl_top|sd_write:u_sd_write"
+Info (12128): Elaborating entity "sd_read" for hierarchy "sd_ctrl_top:u_sd_ctrl_top|sd_read:u_sd_read"
+Info (12128): Elaborating entity "fifo" for hierarchy "fifo:u_fifo"
+Info (12128): Elaborating entity "dcfifo" for hierarchy "fifo:u_fifo|dcfifo:dcfifo_component"
+Info (12130): Elaborated megafunction instantiation "fifo:u_fifo|dcfifo:dcfifo_component"
+Info (12133): Instantiated megafunction "fifo:u_fifo|dcfifo:dcfifo_component" with the following parameter:
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_numwords" = "1024"
+    Info (12134): Parameter "lpm_showahead" = "OFF"
+    Info (12134): Parameter "lpm_type" = "dcfifo"
+    Info (12134): Parameter "lpm_width" = "16"
+    Info (12134): Parameter "lpm_widthu" = "10"
+    Info (12134): Parameter "overflow_checking" = "ON"
+    Info (12134): Parameter "rdsync_delaypipe" = "4"
+    Info (12134): Parameter "underflow_checking" = "ON"
+    Info (12134): Parameter "use_eab" = "ON"
+    Info (12134): Parameter "wrsync_delaypipe" = "4"
+Info (12021): Found 1 design units, including 1 entities, in source file db/dcfifo_s3f1.tdf
+    Info (12023): Found entity 1: dcfifo_s3f1
+Info (12128): Elaborating entity "dcfifo_s3f1" for hierarchy "fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_gray2bin_7ib.tdf
+    Info (12023): Found entity 1: a_gray2bin_7ib
+Info (12128): Elaborating entity "a_gray2bin_7ib" for hierarchy "fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|a_gray2bin_7ib:wrptr_g_gray2bin"
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_4p6.tdf
+    Info (12023): Found entity 1: a_graycounter_4p6
+Info (12128): Elaborating entity "a_graycounter_4p6" for hierarchy "fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|a_graycounter_4p6:rdptr_g1p"
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_graycounter_07c.tdf
+    Info (12023): Found entity 1: a_graycounter_07c
+Info (12128): Elaborating entity "a_graycounter_07c" for hierarchy "fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|a_graycounter_07c:wrptr_g1p"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_q211.tdf
+    Info (12023): Found entity 1: altsyncram_q211
+Info (12128): Elaborating entity "altsyncram_q211" for hierarchy "fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|altsyncram_q211:fifo_ram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_c7d.tdf
+    Info (12023): Found entity 1: alt_synch_pipe_c7d
+Info (12128): Elaborating entity "alt_synch_pipe_c7d" for hierarchy "fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|alt_synch_pipe_c7d:rs_dgwp"
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_b09.tdf
+    Info (12023): Found entity 1: dffpipe_b09
+Info (12128): Elaborating entity "dffpipe_b09" for hierarchy "fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|alt_synch_pipe_c7d:rs_dgwp|dffpipe_b09:dffpipe12"
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_a09.tdf
+    Info (12023): Found entity 1: dffpipe_a09
+Info (12128): Elaborating entity "dffpipe_a09" for hierarchy "fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|dffpipe_a09:ws_brp"
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_synch_pipe_d7d.tdf
+    Info (12023): Found entity 1: alt_synch_pipe_d7d
+Info (12128): Elaborating entity "alt_synch_pipe_d7d" for hierarchy "fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|alt_synch_pipe_d7d:ws_dgrp"
+Info (12021): Found 1 design units, including 1 entities, in source file db/dffpipe_c09.tdf
+    Info (12023): Found entity 1: dffpipe_c09
+Info (12128): Elaborating entity "dffpipe_c09" for hierarchy "fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|alt_synch_pipe_d7d:ws_dgrp|dffpipe_c09:dffpipe16"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_o76.tdf
+    Info (12023): Found entity 1: cmpr_o76
+Info (12128): Elaborating entity "cmpr_o76" for hierarchy "fifo:u_fifo|dcfifo:dcfifo_component|dcfifo_s3f1:auto_generated|cmpr_o76:rdempty_eq_comp"
+Info (12128): Elaborating entity "wm8978_ctrl" for hierarchy "wm8978_ctrl:u_wm8978"
+Info (12128): Elaborating entity "wm8978_config" for hierarchy "wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config"
+Info (12128): Elaborating entity "i2c_dri" for hierarchy "wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_dri:u_i2c_dri"
+Warning (10230): Verilog HDL assignment warning at i2c_dri.v(81): truncated value with size 26 to match size of target (9)
+Info (12128): Elaborating entity "i2c_reg_cfg" for hierarchy "wm8978_ctrl:u_wm8978|wm8978_config:u_wm8978_config|i2c_reg_cfg:u_i2c_reg_cfg"
+Info (12128): Elaborating entity "audio_receive" for hierarchy "wm8978_ctrl:u_wm8978|audio_receive:u_audio_receive"
+Info (12128): Elaborating entity "audio_send" for hierarchy "wm8978_ctrl:u_wm8978|audio_send:u_audio_send"
+Info (12128): Elaborating entity "audio_sd_ctrl" for hierarchy "audio_sd_ctrl:u_audio_sd_ctrl"
+Warning (10240): Verilog HDL Always Construct warning at audio_sd_ctrl.v(58): inferring latch(es) for variable "dac_data", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "dac_data[16]" at audio_sd_ctrl.v(58)
+Info (10041): Inferred latch for "dac_data[17]" at audio_sd_ctrl.v(58)
+Info (10041): Inferred latch for "dac_data[18]" at audio_sd_ctrl.v(58)
+Info (10041): Inferred latch for "dac_data[19]" at audio_sd_ctrl.v(58)
+Info (10041): Inferred latch for "dac_data[20]" at audio_sd_ctrl.v(58)
+Info (10041): Inferred latch for "dac_data[21]" at audio_sd_ctrl.v(58)
+Info (10041): Inferred latch for "dac_data[22]" at audio_sd_ctrl.v(58)
+Info (10041): Inferred latch for "dac_data[23]" at audio_sd_ctrl.v(58)
+Info (10041): Inferred latch for "dac_data[24]" at audio_sd_ctrl.v(58)
+Info (10041): Inferred latch for "dac_data[25]" at audio_sd_ctrl.v(58)
+Info (10041): Inferred latch for "dac_data[26]" at audio_sd_ctrl.v(58)
+Info (10041): Inferred latch for "dac_data[27]" at audio_sd_ctrl.v(58)
+Info (10041): Inferred latch for "dac_data[28]" at audio_sd_ctrl.v(58)
+Info (10041): Inferred latch for "dac_data[29]" at audio_sd_ctrl.v(58)
+Info (10041): Inferred latch for "dac_data[30]" at audio_sd_ctrl.v(58)
+Info (10041): Inferred latch for "dac_data[31]" at audio_sd_ctrl.v(58)
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 109 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file E:/Verilog/top_audio_sd/par/output_files/top_audio_sd.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "aud_adcdat"
+Info (21057): Implemented 790 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 6 output pins
+    Info (21060): Implemented 1 bidirectional pins
+    Info (21061): Implemented 760 logic cells
+    Info (21064): Implemented 16 RAM segments
+    Info (21065): Implemented 1 PLLs
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 505 megabytes
+    Info: Processing ended: Thu Jan 17 18:20:11 2019
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in E:/Verilog/top_audio_sd/par/output_files/top_audio_sd.map.smsg.
+
+

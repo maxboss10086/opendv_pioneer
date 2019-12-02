@@ -1,0 +1,7 @@
+
+State Machine - |top_traffic|traffic_light:u_traffic_light|ctrl
+Name ctrl.11 ctrl.10 ctrl.01 ctrl.00 
+ctrl.00 0 0 0 0 
+ctrl.01 0 0 1 1 
+ctrl.10 0 1 0 1 
+ctrl.11 1 0 0 1 

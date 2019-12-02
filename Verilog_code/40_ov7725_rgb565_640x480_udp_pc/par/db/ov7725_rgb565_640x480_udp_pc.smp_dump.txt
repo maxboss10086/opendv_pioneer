@@ -1,0 +1,31 @@
+
+State Machine - |ov7725_rgb565_640x480_udp_pc|udp:u_udp|ip_send:u_ip_send|cur_state
+Name cur_state.st_crc cur_state.st_tx_data cur_state.st_ip_head cur_state.st_eth_head cur_state.st_preamble cur_state.st_check_sum cur_state.st_idle 
+cur_state.st_idle 0 0 0 0 0 0 0 
+cur_state.st_check_sum 0 0 0 0 0 1 1 
+cur_state.st_preamble 0 0 0 0 1 0 1 
+cur_state.st_eth_head 0 0 0 1 0 0 1 
+cur_state.st_ip_head 0 0 1 0 0 0 1 
+cur_state.st_tx_data 0 1 0 0 0 0 1 
+cur_state.st_crc 1 0 0 0 0 0 1 
+
+State Machine - |ov7725_rgb565_640x480_udp_pc|udp:u_udp|ip_receive:u_ip_receive|cur_state
+Name cur_state.st_rx_end cur_state.st_rx_data cur_state.st_udp_head cur_state.st_ip_head cur_state.st_eth_head cur_state.st_preamble cur_state.st_idle 
+cur_state.st_idle 0 0 0 0 0 0 0 
+cur_state.st_preamble 0 0 0 0 0 1 1 
+cur_state.st_eth_head 0 0 0 0 1 0 1 
+cur_state.st_ip_head 0 0 0 1 0 0 1 
+cur_state.st_udp_head 0 0 1 0 0 0 1 
+cur_state.st_rx_data 0 1 0 0 0 0 1 
+cur_state.st_rx_end 1 0 0 0 0 0 1 
+
+State Machine - |ov7725_rgb565_640x480_udp_pc|i2c_dri:u_i2c_dri|cur_state
+Name cur_state.st_stop cur_state.st_data_rd cur_state.st_addr_rd cur_state.st_data_wr cur_state.st_addr8 cur_state.st_addr16 cur_state.st_sladdr cur_state.st_idle 
+cur_state.st_idle 0 0 0 0 0 0 0 0 
+cur_state.st_sladdr 0 0 0 0 0 0 1 1 
+cur_state.st_addr16 0 0 0 0 0 1 0 1 
+cur_state.st_addr8 0 0 0 0 1 0 0 1 
+cur_state.st_data_wr 0 0 0 1 0 0 0 1 
+cur_state.st_addr_rd 0 0 1 0 0 0 0 1 
+cur_state.st_data_rd 0 1 0 0 0 0 0 1 
+cur_state.st_stop 1 0 0 0 0 0 0 1 

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Dec 19 13:36:21 2018
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : audio_speak
+Top-level Entity Name : audio_speak
+Family : Cyclone IV E
+Total logic elements : 303
+    Total combinational functions : 219
+    Dedicated logic registers : 177
+Total registers : 177
+Total pins : 9
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

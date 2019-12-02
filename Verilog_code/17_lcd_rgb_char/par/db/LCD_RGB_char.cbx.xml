@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="LCD_RGB_char">
+		<CBX_INST_ENTRY INSTANCE_NAME="|lcd_rgb_char|lcd_pll:u_lcd_pll|altpll:altpll_component" CBX_FILE_NAME="lcd_pll_altpll.v"/>
+	</PROJECT>
+</LOG_ROOT>

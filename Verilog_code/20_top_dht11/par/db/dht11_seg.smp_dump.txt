@@ -1,0 +1,20 @@
+
+State Machine - |top_dht11|dht11_drive:u_dht11_drive|next_state
+Name next_state.st_delay next_state.st_rec_data next_state.st_rec_high_87us next_state.st_rec_low_83us next_state.st_high_13us next_state.st_low_20ms next_state.st_power_on_wait 
+next_state.st_power_on_wait 0 0 0 0 0 0 0 
+next_state.st_low_20ms 0 0 0 0 0 1 1 
+next_state.st_high_13us 0 0 0 0 1 0 1 
+next_state.st_rec_low_83us 0 0 0 1 0 0 1 
+next_state.st_rec_high_87us 0 0 1 0 0 0 1 
+next_state.st_rec_data 0 1 0 0 0 0 1 
+next_state.st_delay 1 0 0 0 0 0 1 
+
+State Machine - |top_dht11|dht11_drive:u_dht11_drive|cur_state
+Name cur_state.st_delay cur_state.st_rec_data cur_state.st_rec_high_87us cur_state.st_rec_low_83us cur_state.st_high_13us cur_state.st_low_20ms cur_state.st_power_on_wait 
+cur_state.st_power_on_wait 0 0 0 0 0 0 0 
+cur_state.st_low_20ms 0 0 0 0 0 1 1 
+cur_state.st_high_13us 0 0 0 0 1 0 1 
+cur_state.st_rec_low_83us 0 0 0 1 0 0 1 
+cur_state.st_rec_high_87us 0 0 1 0 0 0 1 
+cur_state.st_rec_data 0 1 0 0 0 0 1 
+cur_state.st_delay 1 0 0 0 0 0 1 

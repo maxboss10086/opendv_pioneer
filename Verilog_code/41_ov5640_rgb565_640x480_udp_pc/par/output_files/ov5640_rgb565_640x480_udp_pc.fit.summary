@@ -1,0 +1,16 @@
+Fitter Status : Successful - Fri Jan 11 11:04:29 2019
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : ov5640_rgb565_640x480_udp_pc
+Top-level Entity Name : ov5640_rgb565_640x480_udp_pc
+Family : Cyclone IV E
+Device : EP4CE10F17C8
+Timing Models : Final
+Total logic elements : 1,375 / 10,320 ( 13 % )
+    Total combinational functions : 1,283 / 10,320 ( 12 % )
+    Dedicated logic registers : 732 / 10,320 ( 7 % )
+Total registers : 732
+Total pins : 69 / 180 ( 38 % )
+Total virtual pins : 0
+Total memory bits : 71,680 / 423,936 ( 17 % )
+Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
+Total PLLs : 1 / 2 ( 50 % )

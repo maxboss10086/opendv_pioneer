@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Oct 29 09:11:59 2019
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : eth_pc_loop
+Top-level Entity Name : eth_pc_loop
+Family : Cyclone IV E
+Device : EP4CE10F17C8
+Timing Models : Final
+Total logic elements : 1,611 / 10,320 ( 16 % )
+    Total combinational functions : 1,253 / 10,320 ( 12 % )
+    Dedicated logic registers : 1,012 / 10,320 ( 10 % )
+Total registers : 1012
+Total pins : 14 / 180 ( 8 % )
+Total virtual pins : 0
+Total memory bits : 71,680 / 423,936 ( 17 % )
+Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

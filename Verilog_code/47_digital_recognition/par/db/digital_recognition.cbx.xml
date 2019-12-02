@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="digital_recognition">
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|pll:u_pll|altpll:altpll_component" CBX_FILE_NAME="pll_altpll.v"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|sdram_top:u_sdram_top|sdram_fifo_ctrl:u_sdram_fifo_ctrl|wrfifo:u_wrfifo|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_nnl1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram" CBX_FILE_NAME="altsyncram_c124.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|vip:u_vip|digital_recognition:u_digital_recognition|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_mgh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|vip:u_vip|digital_recognition:u_digital_recognition|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]" CBX_FILE_NAME="add_sub_jgh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|vip:u_vip|digital_recognition:u_digital_recognition|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_jgh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|vip:u_vip|projection:u_projection|myram:u_h_myram|altsyncram:mem_rtl_0" CBX_FILE_NAME="altsyncram_4dc1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_mux:mux" CBX_FILE_NAME="mux_tsc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:\adv_point_3_and_more:advance_pointer_counter" CBX_FILE_NAME="cntr_jgi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|vip:u_vip|digital_recognition:u_digital_recognition|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_ngh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|vip:u_vip|digital_recognition:u_digital_recognition|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]" CBX_FILE_NAME="add_sub_jgh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|vip:u_vip|digital_recognition:u_digital_recognition|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_bfh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|vip:u_vip|digital_recognition:u_digital_recognition|lpm_mult:Mult5" CBX_FILE_NAME="mult_j8t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|vip:u_vip|rgb2ycbcr:u_rgb2ycbcr|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_kgh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|sdram_top:u_sdram_top|sdram_fifo_ctrl:u_sdram_fifo_ctrl|rdfifo:u_rdfifo|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_aol1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|vip:u_vip|digital_recognition:u_digital_recognition|lpm_mult:Mult3|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_ngh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|vip:u_vip|digital_recognition:u_digital_recognition|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]" CBX_FILE_NAME="add_sub_bfh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:read_pointer_counter" CBX_FILE_NAME="cntr_m9j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|vip:u_vip|digital_recognition:u_digital_recognition|lpm_mult:Mult4|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_mgh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|vip:u_vip|rgb2ycbcr:u_rgb2ycbcr|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_lgh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:status_advance_pointer_counter" CBX_FILE_NAME="cntr_ggi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|vip:u_vip|digital_recognition:u_digital_recognition|lpm_mult:Mult0" CBX_FILE_NAME="mult_j8t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder" CBX_FILE_NAME="decode_dvf.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|LPM_COUNTER:status_read_pointer_counter" CBX_FILE_NAME="cntr_23j.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|vip:u_vip|digital_recognition:u_digital_recognition|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_bfh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|vip:u_vip|projection:u_projection|myram:u_v_myram|altsyncram:mem_rtl_0" CBX_FILE_NAME="altsyncram_2dc1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|vip:u_vip|rgb2ycbcr:u_rgb2ycbcr|lpm_mult:Mult5|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_bfh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|vip:u_vip|digital_recognition:u_digital_recognition|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[1]" CBX_FILE_NAME="add_sub_bfh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_digital_recognition|vip:u_vip|digital_recognition:u_digital_recognition|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_jgh.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

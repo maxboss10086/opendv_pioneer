@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed May 15 15:36:19 2019
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : temp_disp
+Top-level Entity Name : temp_disp
+Family : Cyclone IV E
+Total logic elements : 1,358
+    Total combinational functions : 1,325
+    Dedicated logic registers : 172
+Total registers : 172
+Total pins : 17
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

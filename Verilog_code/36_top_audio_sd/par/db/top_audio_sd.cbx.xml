@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="top_audio_sd">
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_audio_sd|fifo:u_fifo|dcfifo:dcfifo_component" CBX_FILE_NAME="dcfifo_s3f1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_audio_sd|pll_clk:u_pll_clk|altpll:altpll_component" CBX_FILE_NAME="pll_clk_altpll.v"/>
+	</PROJECT>
+</LOG_ROOT>

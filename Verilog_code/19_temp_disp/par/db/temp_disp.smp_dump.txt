@@ -1,0 +1,10 @@
+
+State Machine - |temp_disp|ds18b20_dri:u1_ds18b20_dri|cur_state
+Name cur_state.rd_byte cur_state.rd_temp cur_state.delay cur_state.temp_convert cur_state.wr_byte cur_state.rom_skip cur_state.init 
+cur_state.init 0 0 0 0 0 0 0 
+cur_state.rom_skip 0 0 0 0 0 1 1 
+cur_state.wr_byte 0 0 0 0 1 0 1 
+cur_state.temp_convert 0 0 0 1 0 0 1 
+cur_state.delay 0 0 1 0 0 0 1 
+cur_state.rd_temp 0 1 0 0 0 0 1 
+cur_state.rd_byte 1 0 0 0 0 0 1 

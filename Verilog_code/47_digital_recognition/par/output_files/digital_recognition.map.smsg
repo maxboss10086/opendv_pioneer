@@ -1,0 +1,9 @@
+Warning (10268): Verilog HDL information at digital_recognition.v(191): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at digital_recognition.v(316): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at digital_recognition.v(24): object "NUM_COL" differs only in case from object "num_col" in the same scope
+Info (10281): Verilog HDL Declaration information at digital_recognition.v(23): object "NUM_ROW" differs only in case from object "num_row" in the same scope
+Info (10281): Verilog HDL Declaration information at vip.v(47): object "NUM_COL" differs only in case from object "num_col" in the same scope
+Info (10281): Verilog HDL Declaration information at vip.v(46): object "NUM_ROW" differs only in case from object "num_row" in the same scope
+Info (10281): Verilog HDL Declaration information at projection.v(24): object "NUM_COL" differs only in case from object "num_col" in the same scope
+Info (10281): Verilog HDL Declaration information at projection.v(23): object "NUM_ROW" differs only in case from object "num_row" in the same scope
+Warning (10273): Verilog HDL warning at lcd.v(57): extended using "x" or "z"

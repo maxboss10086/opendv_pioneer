@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Jan 17 18:20:19 2019
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : top_audio_sd
+Top-level Entity Name : top_audio_sd
+Family : Cyclone IV E
+Device : EP4CE10F17C8
+Timing Models : Final
+Total logic elements : 706 / 10,320 ( 7 % )
+    Total combinational functions : 534 / 10,320 ( 5 % )
+    Dedicated logic registers : 480 / 10,320 ( 5 % )
+Total registers : 480
+Total pins : 13 / 180 ( 7 % )
+Total virtual pins : 0
+Total memory bits : 16,384 / 423,936 ( 4 % )
+Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
+Total PLLs : 1 / 2 ( 50 % )

@@ -1,0 +1,16 @@
+Fitter Status : Successful - Fri Jan 18 15:59:53 2019
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : FFT_audio_lcd
+Top-level Entity Name : FFT_audio_lcd
+Family : Cyclone IV E
+Device : EP4CE10F17C8
+Timing Models : Final
+Total logic elements : 4,649 / 10,320 ( 45 % )
+    Total combinational functions : 3,756 / 10,320 ( 36 % )
+    Dedicated logic registers : 3,773 / 10,320 ( 37 % )
+Total registers : 3773
+Total pins : 31 / 180 ( 17 % )
+Total virtual pins : 0
+Total memory bits : 20,864 / 423,936 ( 5 % )
+Embedded Multiplier 9-bit elements : 28 / 46 ( 61 % )
+Total PLLs : 1 / 2 ( 50 % )

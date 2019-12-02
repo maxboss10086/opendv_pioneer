@@ -1,0 +1,534 @@
+Flow report for FIR_audio_lcd
+Mon Oct 28 11:22:47 2019
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Flow Summary                                                                     ;
++------------------------------------+---------------------------------------------+
+; Flow Status                        ; Flow Failed - Mon Oct 28 11:22:47 2019      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
+; Revision Name                      ; FIR_audio_lcd                               ;
+; Top-level Entity Name              ; FIR_audio_lcd                               ;
+; Family                             ; Cyclone IV E                                ;
+; Device                             ; EP4CE10F17C8                                ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
++------------------------------------+---------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 10/28/2019 11:22:45 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; FIR_audio_lcd       ;
++-------------------+---------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                            ;
++-------------------------------------+--------------------------------------------------------------------------------------------+---------------+-------------+------------+
+; Assignment Name                     ; Value                                                                                      ; Default Value ; Entity Name ; Section Id ;
++-------------------------------------+--------------------------------------------------------------------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 193744349413562.157223296507188                                                            ; --            ; --          ; --         ;
+; ENABLE_SIGNALTAP                    ; Off                                                                                        ; --            ; --          ; --         ;
+; IP_TOOL_NAME                        ; ALTSQRT                                                                                    ; --            ; --          ; --         ;
+; IP_TOOL_NAME                        ; ALTPLL                                                                                     ; --            ; --          ; --         ;
+; IP_TOOL_NAME                        ; FFT                                                                                        ; --            ; --          ; --         ;
+; IP_TOOL_NAME                        ; FIFO                                                                                       ; --            ; --          ; --         ;
+; IP_TOOL_NAME                        ; FIFO                                                                                       ; --            ; --          ; --         ;
+; IP_TOOL_NAME                        ; FIR Compiler                                                                               ; --            ; --          ; --         ;
+; IP_TOOL_VERSION                     ; 13.1                                                                                       ; --            ; --          ; --         ;
+; IP_TOOL_VERSION                     ; 13.1                                                                                       ; --            ; --          ; --         ;
+; IP_TOOL_VERSION                     ; 13.1                                                                                       ; --            ; --          ; --         ;
+; IP_TOOL_VERSION                     ; 13.1                                                                                       ; --            ; --          ; --         ;
+; IP_TOOL_VERSION                     ; 13.1                                                                                       ; --            ; --          ; --         ;
+; IP_TOOL_VERSION                     ; 13.1                                                                                       ; --            ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                                                         ; --            ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/sqrt_inst.v                                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/pll.ppf                                                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfpbdr_core_fft_131.vhd                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfpbdr_firststage_fft_131.vhd                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfpbdr_laststage_fft_131.vhd                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfpbdr_stage_fft_131.vhd                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfpbdr_top_fft_131.vhd                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfprvs_core_fft_131.vhd                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfprvs_fft4_fft_131.vhd                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfprvs_firststage_fft_131.vhd                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfprvs_laststage_fft_131.vhd                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfprvs_stage_fft_131.vhd                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfprvs_top_fft_131.vhd                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfprvs_twiddle_opt_fft_131.vhd                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfp_add_fft_131.vhd                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfp_cmplxmult_fft_131.vhd                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfp_core_fft_131.vhd                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfp_del_fft_131.vhd                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfp_dft4_fft_131.vhd                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfp_fft4_fft_131.vhd                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfp_laststage_fft_131.vhd                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfp_lsft32_fft_131.vhd                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfp_mul_2727_fft_131.vhd                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfp_mul_fft_131.vhd                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfp_ram_fft_131.vhd                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfp_rsft32_fft_131.vhd                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfp_rvsctl_fft_131.vhd                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfp_rvs_fft_131.vhd                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfp_shift_fft_131.vhd                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfp_snorm_fft_131.vhd                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfp_snorm_mul_fft_131.vhd                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfp_stage_fft_131.vhd                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfp_sub_fft_131.vhd                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfp_top_fft_131.vhd                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfp_twiddle_fft_131.vhd                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfp_twiddle_opt_fft_131.vhd                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fftfp_unorm_fft_131.vhd                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fft_cmult_cpx2_fft_131.vhd                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fft_cmult_cpx_fft_131.vhd                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fft_mult_can_fft_131.vhd                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fft_mult_cpx_1825_fft_131.v                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_fft_mult_cpx_fft_131.vhd                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_hcc_cntsgn32_fft_131.vhd                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_hcc_cntusgn32_fft_131.vhd                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_hcc_sgnpstn_fft_131.vhd                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/apn_hcc_usgnpos_fft_131.vhd                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_1dp_ram_fft_131.vhd                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_1tdp_rom_fft_131.vhd                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_3dp_rom_fft_131.vhd                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_3pi_mram_fft_131.vhd                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_3tdp_rom_fft_131.vhd                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_4dp_ram_fft_131.vhd                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_6tdp_rom_fft_131.vhd                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_alt_shift_tdl_fft_131.vhd                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_bfp_ctrl_fft_131.vhd                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_bfp_i_1pt_fft_131.vhd                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_bfp_i_fft_131.vhd                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_bfp_o_1pt_fft_131.vhd                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_bfp_o_fft_131.vhd                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_burst_ctrl_de_fft_131.vhd                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_burst_ctrl_fft_131.vhd                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_burst_ctrl_qe_fft_131.vhd                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_cmult_can_fft_131.vhd                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_cmult_std_fft_131.vhd                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_cnt_ctrl_de_fft_131.vhd                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_cnt_ctrl_fft_131.vhd                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_cxb_addr_fft_131.vhd                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_cxb_data_fft_131.vhd                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_cxb_data_mram_fft_131.vhd                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_cxb_data_r_fft_131.vhd                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_dataadgen_fft_131.vhd                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_data_ram_dp_fft_131.vhd                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_data_ram_fft_131.vhd                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_dft_bfp_fft_131.vhd                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_dft_bfp_sgl_fft_131.vhd                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_dpi_mram_fft_131.vhd                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_dp_mram_fft_131.vhd                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_dualstream_fft_131.vhd                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_in_write_sgl_fft_131.vhd                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_lcm_mult_2m_fft_131.vhd                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_lcm_mult_fft_131.vhd                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_lpprdadgen_fft_131.vhd                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_lpprdadr2gen_fft_131.vhd                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_lpp_fft_131.vhd                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_lpp_serial_fft_131.vhd                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_lpp_serial_r2_fft_131.vhd                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_mult_add_fft_131.vhd                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_m_k_counter_fft_131.vhd                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_pround_fft_131.vhd                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_sglstream_fft_131.vhd                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_si_de_so_bb_fft_131.vhd                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_si_de_so_b_fft_131.vhd                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_si_qe_so_bb_fft_131.vhd                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_si_qe_so_b_fft_131.vhd                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_si_se_so_bb_fft_131.vhd                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_si_se_so_b_fft_131.vhd                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_si_sose_so_b_fft_131.vhd                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_tdl_bit_fft_131.vhd                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_tdl_bit_rst_fft_131.vhd                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_tdl_fft_131.vhd                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_tdl_rst_fft_131.vhd                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_twadgen_dual_fft_131.vhd                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_twadgen_fft_131.vhd                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_twadsogen_fft_131.vhd                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_twadsogen_q_fft_131.vhd                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_twiddle_ctrl_qe_fft_131.vhd                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_twid_rom_tdp_fft_131.vhd                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_unbburst_ctrl_de_fft_131.vhd                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_unbburst_ctrl_fft_131.vhd                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_unbburst_ctrl_qe_fft_131.vhd                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_unbburst_sose_ctrl_fft_131.vhd                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_wrengen_fft_131.vhd                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/asj_fft_wrswgen_fft_131.vhd                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_avalon_streaming_block_sink_fftfprvs_fft_131.vhd          ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_avalon_streaming_block_sink_fft_131.vhd                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_avalon_streaming_block_source_fft_131.vhd                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_avalon_streaming_controller_fft_131.vhd                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_avalon_streaming_controller_pe_fft_131.vhd                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_avalon_streaming_monitor_fft_131.vhd                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_avalon_streaming_sink_fft_131.vhd                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_avalon_streaming_sink_model_fft_131.vhd                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_avalon_streaming_source_fft_131.vhd                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_avalon_streaming_source_from_monitor_fft_131.vhd          ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_avalon_streaming_source_model_fft_131.vhd                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_bit_reverse_addr_control_fft_131.vhd                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_bit_reverse_core_fft_131.vhd                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_bit_reverse_reverse_carry_adder_fft_131.vhd               ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_fpcompiler_alufp_fft_131.vhd                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_fpcompiler_aslf_fft_131.vhd                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_fpcompiler_asrf_fft_131.vhd                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_fpcompiler_castftox_fft_131.vhd                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_fpcompiler_castxtof_fft_131.vhd                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_fpcompiler_clzf_fft_131.vhd                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_fpcompiler_mulfp_fft_131.vhd                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_lib_pkg_fft_131.vhd                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_math_pkg_fft_131.vhd                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_r22sdf_adder_fp_fft_131.vhd                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_r22sdf_addsub_fft_131.vhd                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_r22sdf_bfii_fft_131.vhd                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_r22sdf_bfi_fft_131.vhd                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_r22sdf_bf_control_fft_131.vhd                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_r22sdf_cma_adder_fp_fft_131.vhd                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_r22sdf_cma_bfi_fp_fft_131.vhd                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_r22sdf_cma_fft_131.vhd                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_r22sdf_core_fft_131.vhd                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_r22sdf_counter_fft_131.vhd                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_r22sdf_delay_fft_131.vhd                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_r22sdf_enable_control_fft_131.vhd                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_r22sdf_lib_pkg_fft_131.vhd                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_r22sdf_stage_fft_131.vhd                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_r22sdf_stg_out_pipe_fft_131.vhd                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_r22sdf_stg_pipe_fft_131.vhd                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_r22sdf_top_fft_131.vhd                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_r22sdf_twrom_fft_131.vhd                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_roundsat_fft_131.vhd                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/auk_dspip_text_pkg_fft_131.vhd                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/fft_pack_fft_131.vhd                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/fft-library/twid_rom_fft_131.vhd                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/FFT.vo                                                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/FFT_tb.v                                                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/FFT_model.m                                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/FFT_tb.m                                                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/FFT_nativelink.tcl                                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/FFT_real_input.txt                                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/FFT_imag_input.txt                                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/FFT_1n128sin.hex                                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/FFT_2n128sin.hex                                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/FFT_3n128sin.hex                                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/FFT_1n128cos.hex                                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/FFT_2n128cos.hex                                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/FFT_3n128cos.hex                                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/FFT.v                                                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/FFT_bb.v                                                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/FFT.bsf                                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/FFT.qip                                                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT/FFT.html                                                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/audio_in_fifo_inst.v                                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FFT_LCD_FIFO_inst.v                                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/accum.v                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/addr_cnt_dn.v                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/addr_cnt_dn_poly.v                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/addr_cnt_up.v                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/at_sink_mod.v                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/at_sink_mod_bin.v                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/at_sink_mod_par.v                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/at_src_mod.v                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/at_src_mod_par.v                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_avalon_streaming_block_sink_fftfprvs_fir_131.vhd ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_avalon_streaming_block_sink_fir_131.vhd          ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_avalon_streaming_block_source_fir_131.vhd        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_avalon_streaming_controller_fir_131.vhd          ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_avalon_streaming_controller_pe_fir_131.vhd       ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_avalon_streaming_monitor_fir_131.vhd             ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_avalon_streaming_sink_fir_131.vhd                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_avalon_streaming_sink_model_fir_131.vhd          ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_avalon_streaming_source_fir_131.vhd              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_avalon_streaming_source_from_monitor_fir_131.vhd ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_avalon_streaming_source_model_fir_131.vhd        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_delay_fir_131.vhd                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_fastaddsub_fir_131.vhd                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_fastadd_fir_131.vhd                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_fast_accumulator_fir_131.vhd                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_fifo_pfc_fir_131.vhd                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_fir_accumulator_fir_131.vhd                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_fir_adders_fir_131.vhd                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_fir_adder_tree_fir_131.vhd                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_fir_avalon_slave_write_fir_131.vhd               ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_fir_coef_banks_fixed_fir_131.vhd                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_fir_data_memory_bank_fir_131.vhd                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_fir_dspblock_bank_fir_131.vhd                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_fir_dspblock_cascade_bank_fir_131.vhd            ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_fir_lib_pkg_fir_131.vhd                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_fir_math_pkg_fir_131.vhd                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_fir_memory_simple_dual_fir_131.vhd               ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_fir_memory_single_fir_131.vhd                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_fir_memory_true_dual_fir_131.vhd                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_fir_mult_bank_fir_131.vhd                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_fir_top_dec_half_sym_fir_131.vhd                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_fir_top_dec_sym_add_cas_fir_131.vhd              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_fir_top_int_sym_fir_131.vhd                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_fir_top_sin_sym_fir_131.vhd                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_lib_pkg_fir_131.vhd                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_math_pkg_fir_131.vhd                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_pfc_fir_131.vhd                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_pipelined_adder_fir_131.vhd                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_roundsat_fir_131.vhd                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/auk_dspip_text_pkg_fir_131.vhd                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/coef_in_conv.v                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/data_cnt_dn_stat.v                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/data_cnt_up.v                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/data_sel_dec.v                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/dat_mm_brg.v                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/dat_store.v                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/dat_store_c.v                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/decoder_we.v                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/decoder_we_cen.v                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/delay.v                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/delay_cen.v                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/delay_mul.v                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/delay_mul_cen.v                                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/delay_mux.v                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/delay_mux_mch_odd.v                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/delay_mux_mch_odd_mcv.v                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/delay_trig.v                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/delay_trig_cen.v                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/eab_tdl_hc.v                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/eab_tdl_strat.v                                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/eab_tdl_strat_mram.v                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/fir_definitions_pkg_fir_131.vhd                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/lc_store.v                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/lc_store_cen.v                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/lc_tdl_strat.v                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/lc_tdl_strat_cen.v                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/maccum.v                                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/maccum_cen.v                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mac_tl.v                                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mcv_ctrl_deci.v                                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mcv_ctrl_nc.v                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mlu.v                                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mlu_dly1.v                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mlu_dly2.v                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mlu_inf_1reg.v                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mlu_inf_1reg_cen.v                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mlu_inf_2reg.v                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mlu_inf_2reg_cen.v                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mlu_nd.v                                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mlu_nd_cen.v                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mlu_nd_lc.v                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mr_accum_wr.v                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mr_acc_ctrl_cen_wr.v                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mr_acc_ctrl_wr.v                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mr_decoder_we_wr.v                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mr_del_coef_set.v                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mr_dnc_wr.v                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mr_lcdelay_wr.v                                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mr_lcstore_wr.v                                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mr_lrdy_wr.v                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mr_mux_2to1_cen_wr.v                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mr_mux_2to1_wr.v                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mr_ser_shift_wr.v                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mr_upc_reload_wr.v                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mr_upc_wr.v                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/msft.v                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/msft_data.v                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/msft_data_reseq.v                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/msft_data_reseq_mc.v                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/msft_lt_128.v                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/msft_lt_32.v                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/msft_mcv.v                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/msft_mem.v                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/msft_mem_coef.v                                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/msft_mem_hc.v                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/msft_mem_mcoef.v                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/msft_mem_reseq.v                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/msft_mem_reseq_hc.v                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/msft_mem_reseq_mcycle.v                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/msft_reseq_mc.v                                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/msft_scv.v                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mul_add.v                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mux_16.v                                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mux_16_cen.v                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mux_2to1.v                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mux_2to1_cen.v                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mux_2to1_comb.v                                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/mux_nc.v                                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/para_tdl.v                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/par_ctrl.v                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/par_ld_ser_tdl_nc.v                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/par_ld_ser_tdl_wr.v                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/pll_fir.v                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/poly_mac_ctrl_dec.v                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/poly_mac_ctrl_int.v                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/ram_2pt_mram_cen.v                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/ram_2pt_var.v                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/ram_2pt_var_cen.v                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/ram_2pt_var_cen_hc.v                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/ram_inf.v                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/ram_lut.v                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/ram_lut_cen.v                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/rnd_dat.v                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/rom_6_lut.v                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/rom_6_lut_r.v                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/rom_lut.v                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/rom_lut_cen.v                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/rom_lut_r.v                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/rom_lut_r_cen.v                                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/rom_mset_lut.v                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/rom_mset_lut_r.v                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/rom_mset_lut_r_cen.v                                       ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/rom_mset_lut_r_cen_wr.v                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/rom_mset_lut_r_wr.v                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/sadd.v                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/sadd_c.v                                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/sadd_cen.v                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/sadd_c_cen.v                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/sadd_load.v                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/sadd_lpm.v                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/sadd_lpm_cen.v                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/sadd_lpm_reg_top_cen.v                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/sadd_reg_top.v                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/sadd_reg_top_cen.v                                         ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/sadd_sub.v                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/sat_dat.v                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/scale_accum.v                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/scale_accum_cen.v                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/scale_shft_comb.v                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/scale_shft_comb_cen.v                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/scv_ctrl.v                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/scv_ctrl_deci.v                                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/sc_add.v                                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/ser_ctrl_cen.v                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/ser_shft.v                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/ser_shft_cen.v                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/ser_shift.v                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/sgn_ext.v                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/shift_in.v                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/shift_out.v                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/slave2slave.v                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/ssub.v                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/ssub_c.v                                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/ssub_cen.v                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/ssub_lpm.v                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/ssub_lpm_cen.v                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/sym_add_ser.v                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/sym_add_ser_cen.v                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/sym_sub_ser_cen.v                                          ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/tdl_da_lc.v                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/trig_buf.v                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/trig_buf_l.v                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/trig_buf_r.v                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/tsadd.v                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/tsadd_c.v                                                  ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/tsadd_cen.v                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/tsadd_c_cen.v                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/tsadd_lpm.v                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/tsadd_lpm_cen.v                                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/tsadd_lpm_reg_top_cen.v                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/tsadd_reg_top_cen.v                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/u2ssub.v                                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/u2ssub_cen.v                                               ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/uadd.v                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/uadd_cen.v                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_compiler-library/wr_en_gen.v                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_lowpass.v                                                                   ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_lowpass_bb.v                                                                ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_lowpass.bsf                                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_lowpass_ast.vhd                                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_lowpass_constraints.tcl                                                     ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_lowpass_nativelink.tcl                                                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_lowpass_mlab.m                                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_lowpass_model.m                                                             ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_lowpass.vec                                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/tb_fir_lowpass.vhd                                                              ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_lowpass_msim.tcl                                                            ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_lowpass_input.txt                                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_lowpass_coef_int.txt                                                        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_lowpass_param.txt                                                           ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_lowpass_silent_param.txt                                                    ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_lowpass.qip                                                                 ; --            ; --          ; --         ;
+; MISC_FILE                           ; ipcore/FIR/fir_lowpass.html                                                                ; --            ; --          ; --         ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                                                                       ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; 16764057                                                                                   ; --            ; --          ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                                      ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                                                                     ; --            ; --          ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                                        ; --            ; --          ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                                      ; --            ; --          ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                                               ; --            ; --          ; --         ;
+; SEARCH_PATH                         ; ipcore/FFT/.                                                                               ; --            ; --          ; --         ;
+; SEARCH_PATH                         ; ipcore/FFT/fft-library                                                                     ; --            ; --          ; --         ;
+; SEARCH_PATH                         ; ipcore/FIR/.                                                                               ; --            ; --          ; --         ;
+; SEARCH_PATH                         ; ipcore/FIR/fir_compiler-library                                                            ; --            ; --          ; --         ;
+; USE_SIGNALTAP_FILE                  ; output_files/stp1.stp                                                                      ; --            ; --          ; --         ;
++-------------------------------------+--------------------------------------------------------------------------------------------+---------------+-------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:03     ; 1.0                     ; 4736 MB             ; 00:00:03                           ;
+; Total                ; 00:00:03     ; --                      ; --                  ; 00:00:03                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Flow OS Summary                                                                   ;
++----------------------+------------------+-----------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++----------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-QTFO7MH  ; Windows 7 ; 6.2        ; x86_64         ;
++----------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off FIR_audio_lcd -c FIR_audio_lcd
+
+
+

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Aug 21 10:27:30 2018
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
+Revision Name : ip_ram
+Top-level Entity Name : ip_ram
+Family : Cyclone IV E
+Total logic elements : 938
+    Total combinational functions : 558
+    Dedicated logic registers : 729
+Total registers : 729
+Total pins : 2
+Total virtual pins : 0
+Total memory bits : 47,360
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

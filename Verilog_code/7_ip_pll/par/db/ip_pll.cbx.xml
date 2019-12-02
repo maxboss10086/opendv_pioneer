@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="ip_pll">
+		<CBX_INST_ENTRY INSTANCE_NAME="|ip_pll|pll_clk:u_pll_clk|altpll:altpll_component" CBX_FILE_NAME="pll_clk_altpll.v"/>
+	</PROJECT>
+</LOG_ROOT>
